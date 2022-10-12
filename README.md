@@ -1,16 +1,16 @@
 # Prisma SASE Cloud Managed API
  Python framework to make changes to Prisma Access Cloud Managed
 
-Current working version - 0.01
+Current working version - 0.02
 
-See CHANGELOG.md for updates.
+See [CHANGELOG.md](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/CHANGELOG.md) for updates.
 
 # Prisma Access
 ## Supported Features 
 ### policyObjects
 | Feature | List | Create | Edit | Delete |
 | ------- | ---- | ------ | ---- | ------ |
-| Tags | :white_check_mark: | :white_check_mark: | :x: | :x: |
+| Tags | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Address Objects | :white_check_mark: | :white_check_mark: | :x: | :x: |
 | Address Group Objects | :white_check_mark: | :white_check_mark: | :x: | :x: |
 
