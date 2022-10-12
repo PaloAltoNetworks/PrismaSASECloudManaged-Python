@@ -1,7 +1,9 @@
 # Prisma SASE Cloud Managed API
- Python framework to make changes to Prisma Access Cloud Managed
+Python framework to make changes to Prisma Access Cloud Managed
+Current working version - _0.02_
 
-Current working version - 0.02
+* Authors - [TheScriptGuy](https://github.com/TheScriptGuy)
+
 
 See [CHANGELOG.md](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/CHANGELOG.md) for updates.
 
