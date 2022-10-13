@@ -1,4 +1,8 @@
 # Changelog
+## 2022/10/12 - Version 0.04
+### Feature Request
+* include folder name HTTP responses - [feature request](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/issues/4)
+
 ## 2022/10/12 - Version 0.03
 ### Features Added
 #### Policy Objects
