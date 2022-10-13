@@ -133,7 +133,7 @@ class tags:
 		if 'data' in myTagList:
 			# Let's go and find the tag ID
 			for item in myTagList['data']:
-				if item['name'] == __tagObject['name']:
+				if item['name'] == __tagObject['name'] and item['folder'] == __folder:
 					myTagId = item['id']
 					break
 		
