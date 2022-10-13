@@ -57,11 +57,11 @@ class addresses:
 
 		match __responseStatusCode:
 			case 404:
-				print(f"404 - An error occured while creating object {__addressObject['name']} - {__response['_errors'][0]['details']['message']}")
+				print(f"404 - An error occured while creating object {__addressObject['name']} - {__response['_errors'][0]['details']['message']} in folder {__folder}")
 			case 400:
 				print("400 - Bad request. Malformed payload.")
 			case 201:
-				print(f"201 - Address object {__addressObject['name']} created.")
+				print(f"201 - Address object {__addressObject['name']} created in folder {__folder}.")
 			case _:
 				print("Not sure how to interpret response.")
 				print(f"Response Status Code - {__responseStatusCode}")
@@ -102,11 +102,11 @@ class addresses:
 
 			match __responseStatusCode:
 				case 404:
-					print(f"404 - An error occured while creating address {__addressObject['name']} - {__response['_errors'][0]['details']['message']}")
+					print(f"404 - An error occured while creating address {__addressObject['name']} - {__response['_errors'][0]['details']['message']} in folder {__folder}.")
 				case 400:
 					print("400 - Bad request. Malformed payload.")
 				case 200:
-					print(f"200 - Address object {__addressObject['name']} edited.")
+					print(f"200 - Address object {__addressObject['name']} edited in folder {__folder}.")
 				case _:
 					print("Not sure how to interpret response.")
 					print(f"Response Status Code - {__responseStatusCode}")
@@ -153,11 +153,11 @@ class addresses:
 				case 409:
 					print(f"409 - Cannot delete address object being referenced {__response['_errors'][0]['details']['message']}")
 				case 404:
-					print(f"404 - An error occured while creating address {__addresssObject['name']} - {__response['_errors'][0]['details']['message']}")
+					print(f"404 - An error occured while creating address {__addresssObject['name']} - {__response['_errors'][0]['details']['message']} in folder {__folder}.")
 				case 400:
 					print("400 - Bad request. Malformed payload.")
 				case 200:
-					print(f"200 - Address object {__addressObject['name']} deleted.")
+					print(f"200 - Address object {__addressObject['name']} deleted in folder {__folder}.")
 				case _:
 					print("Not sure how to interpret response.")
 					print(f"Response Status Code - {__responseStatusCode}")
