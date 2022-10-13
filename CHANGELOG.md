@@ -1,6 +1,10 @@
 # Changelog
-## 2022/10/11 - Version 0.02
+## 2022/10/12 - Version 0.03
+### Features Added
+#### Policy Objects
+* Address Objects - Delete, Edit
 
+## 2022/10/11 - Version 0.02
 ### Features Added
 #### Policy Objects
 * Tags - Delete, Edit

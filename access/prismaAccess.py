@@ -32,6 +32,20 @@ class prismaAccess:
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
+	def paAddressesEdit(self, __addressObject, __folder="Shared"):
+		if self.checkTokenStillValid():
+			paAddresses = addresses.addresses(self.saseApi, self.saseToken, self.contentType, self.saseAuthHeaders)
+			paAddresses.paAddressesEdit(__addressObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paAddressesDelete(self, __addressObject, __folder="Shared"):
+		if self.checkTokenStillValid():
+			paAddresses = addresses.addresses(self.saseApi, self.saseToken, self.contentType, self.saseAuthHeaders)
+			paAddresses.paAddressesDelete(__addressObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
 	def paTagsListTags(self, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paTag = tags.tags(self.saseApi, self.saseToken, self.contentType, self.saseAuthHeaders)
@@ -128,7 +142,7 @@ class prismaAccess:
 
 	def __init__(self, __saseToken):
 		"""Initialize Class"""
-		self.prismaAccessPythonAPIVersion = "0.02"
+		self.prismaAccessPythonAPIVersion = "0.03"
 		self.saseApi = "https://api.sase.paloaltonetworks.com"
 		self.saseToken = __saseToken
 		self.contentType = "application/json"

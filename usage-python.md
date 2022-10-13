@@ -51,3 +51,4 @@ Shared,ExampleTag,Yellow,test tag object.
 # Detailed examples
 ## Policy Objects
 * [tags](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/examples/tags.md)
+* [address objects](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/examples/addresses.md)
