@@ -14,7 +14,7 @@ See [CHANGELOG.md](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Py
 | ------- | ---- | ------ | ---- | ------ |
 | Tags | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Address Objects | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Address Group Objects | :white_check_mark: | :white_check_mark: | :x: | :x: |
+| Address Group Objects | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 ### Service Setup
 | Feature | List | Create | Edit | Delete |

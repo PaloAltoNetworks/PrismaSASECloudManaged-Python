@@ -105,6 +105,20 @@ class prismaAccess:
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
+	def paAddressGroupsEdit(self, __addressGroupObject, __folder="Shared"):
+		if self.checkTokenStillValid():
+			paAddressGroup = addressGroups.addressGroups(self.saseApi, self.saseToken, self.contentType, self.saseAuthHeaders)
+			paAddressGroup.paAddressGroupsEdit(__addressGroupObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paAddressGroupsDelete(self, __addressGroupObject, __folder="Shared"):
+		if self.checkTokenStillValid():
+			paAddressGroup = addressGroups.addressGroups(self.saseApi, self.saseToken, self.contentType, self.saseAuthHeaders)
+			paAddressGroup.paAddressGroupsDelete(__addressGroupObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
 	def paServiceConnectionsListServiceConnections(self, __folder="Service Connections"):
 		"""List all service connections that are defined."""
 		if self.checkTokenStillValid():
