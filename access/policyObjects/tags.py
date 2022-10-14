@@ -57,11 +57,11 @@ class tags:
 
 		match __responseStatusCode:
 			case 404:
-				print(f"404 - An error occured while editing tag {__tagObject['name']} - {__response['_errors'][0]['details']['message']}")
+				print(f"404 - An error occured while editing tag {__tagObject['name']} - {__response['_errors'][0]['details']['message']} in folder {__folder}.")
 			case 400:
 				print("400 - Bad request. Malformed payload.")
 			case 201:
-				print(f"201 - Tag object {__tagObject['name']} created.")
+				print(f"201 - Tag object {__tagObject['name']} created in folder {__folder}.")
 			case _:
 				print("Not sure how to interpret response.")
 				print(f"Response Status Code - {__responseStatusCode}")
@@ -102,11 +102,11 @@ class tags:
 
 			match __responseStatusCode:
 				case 404:
-					print(f"404 - An error occured while creating tag {__tagObject['name']} - {__response['_errors'][0]['details']['message']}")
+					print(f"404 - An error occured while creating tag {__tagObject['name']} - {__response['_errors'][0]['details']['message']} in folder {__folder}.")
 				case 400:
 					print("400 - Bad request. Malformed payload.")
 				case 200:
-					print(f"200 - Tag object {__tagObject['name']} edited.")
+					print(f"200 - Tag object {__tagObject['name']} edited in folder {__folder}.")
 				case _:
 					print("Not sure how to interpret response.")
 					print(f"Response Status Code - {__responseStatusCode}")
@@ -151,11 +151,11 @@ class tags:
 
 			match __responseStatusCode:
 				case 404:
-					print(f"404 - An error occured while creating tag {__tagObject['name']} - {__response['_errors'][0]['details']['message']}")
+					print(f"404 - An error occured while creating tag {__tagObject['name']} - {__response['_errors'][0]['details']['message']} in folder {__folder}.")
 				case 400:
 					print("400 - Bad request. Malformed payload.")
 				case 200:
-					print(f"200 - Tag object {__tagObject['name']} deleted.")
+					print(f"200 - Tag object {__tagObject['name']} deleted in folder {__folder}.")
 				case _:
 					print("Not sure how to interpret response.")
 					print(f"Response Status Code - {__responseStatusCode}")

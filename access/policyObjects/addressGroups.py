@@ -47,11 +47,11 @@ class addressGroups:
 
 		match __responseStatusCode:
 			case 404:
-				print(f"404 - An error occured while creating address group {__addressGroupObject['name']} - {__response['_errors'][0]['details']['message']}")
+				print(f"404 - An error occured while creating address group {__addressGroupObject['name']} - {__response['_errors'][0]['details']['message']} in folder {__folder}.")
 			case 400:
 				print("400 - Bad request. Malformed payload.")
 			case 201:
-				print(f"201 - Tag object {__addressGroupObject['name']} created.")
+				print(f"201 - Tag object {__addressGroupObject['name']} created in folder {__folder}.")
 			case _:
 				print("Not sure how to interpret response.")
 				print(f"Response Status Code - {__responseStatusCode}")
