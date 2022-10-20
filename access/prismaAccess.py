@@ -154,9 +154,31 @@ class prismaAccess:
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
+	def paIkeCryptoProfilesCreate(self, __ikeCryptoProfileObject, __folder="Shared"):
+		"""Create an address group object"""
+		if self.checkTokenStillValid():
+			paIkeCryptoProfiles = ikeCryptoProfiles.ikeCryptoProfiles(self.saseApi, self.saseToken, self.contentType, self.saseAuthHeaders)
+			paIkeCryptoProfiles.paIkeCryptoProfilesCreate(__ikeCryptoProfileObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paIkeCryptoProfilesEdit(self, __ikeCryptoProfileObject, __folder="Shared"):
+		if self.checkTokenStillValid():
+			paIkeCryptoProfiles = ikeCryptoProfiles.ikeCryptoProfiles(self.saseApi, self.saseToken, self.contentType, self.saseAuthHeaders)
+			paIkeCryptoProfiles.paIkeCryptoProfilesEdit(__ikeCryptoProfileObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paIkeCryptoProfilesDelete(self, __ikeCryptoProfileObject, __folder="Shared"):
+		if self.checkTokenStillValid():
+			paIkeCryptoProfiles = ikeCryptoProfiles.ikeCryptoProfiles(self.saseApi, self.saseToken, self.contentType, self.saseAuthHeaders)
+			paIkeCryptoProfiles.paIkeCryptoProfilesDelete(__ikeCryptoProfileObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
 	def __init__(self, __saseToken):
 		"""Initialize Class"""
-		self.prismaAccessPythonAPIVersion = "0.04"
+		self.prismaAccessPythonAPIVersion = "0.05"
 		self.saseApi = "https://api.sase.paloaltonetworks.com"
 		self.saseToken = __saseToken
 		self.contentType = "application/json"
