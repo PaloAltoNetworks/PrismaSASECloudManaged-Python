@@ -53,3 +53,6 @@ Shared,ExampleTag,Yellow,test tag object.
 * [tags](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/examples/tags.md)
 * [address objects](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/examples/addresses.md)
 * [address group objects](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/examples/address-groups.md)
+
+## Service Setup
+* [IKE Crypto Profiles](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/examples/serviceSetup/ike-crypto-profiles.md)

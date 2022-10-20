@@ -1,4 +1,9 @@
 # Changelog
+## 2022/10/20 - Version 0.05
+### Features Added
+#### Service Setup
+* IKE Crypto Profiles - Create, Edit, Delete
+
 ## 2022/10/14 - Version 0.04
 ### Features Added
 #### Policy Objects
