@@ -23,6 +23,7 @@ Alternatively, you can submit the information as part of the initialization with
 ```python
 from auth import saseAuthentication
 from access import prismaAccess
+from access import policyObjects
 
 p = saseAuthentication.saseAuthentication()
 p.prismaAccessAuth("1234567890","pan.svc.acct.access@1234567890.iam.randomaccount.com","1234afbe-beac-12d6-aa95-13425671a919c")
@@ -34,25 +35,22 @@ In both cases, if it works, no errors will be displayed.
 
 Now that we have the Auth Token created, we can run commands on the Prisma Access Cloud Managed environment:
 ```python
-n.paTagsListTags()
+o = policyObjects.policyObjects(n)
+
+o.paTagsListTags()
 ```
 
 Resulting output will look like the following:
-```csv
-Tag Folder,Tag Name,Tag Color,Tag Comments
-predefined,Sanctioned,Olive,
-predefined,empty,,
-Shared,best-practice,Green,
-Shared,Microsoft 365,Red,
-Shared,ADEM,Blue,test
-Shared,ExampleTag,Yellow,test tag object.
+```json
+{"data": [{"name": "Sanctioned", "folder": "predefined", "color": "Olive"}, {"name": "empty", "folder": "predefined"}, {"id": "3af5d3bd-68e6-4ab1-8a66-578f757983a1", "name": "best-practice", "folder": "Shared", "color": "Green"}, {"id": "06f69745-df4f-4b03-b39f-9853fa43928b", "name": "Microsoft 365", "folder": "Shared", "color": "Red"}, {"id": "d5385310-3993-4c83-86ac-e592290d9109", "name": "ADEM", "folder": "Shared", "color": "Blue", "comments": "test"}], "offset": 0, "total": 5, "limit": 200}
 ```
 
 # Detailed examples
 ## Policy Objects
-* [tags](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/examples/tags.md)
-* [address objects](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/examples/addresses.md)
-* [address group objects](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/examples/address-groups.md)
+* [tags](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/examples/policyObjects/tags.md)
+* [address objects](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/examples/policyObjects/addresses.md)
+* [address group objects](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/examples/policyObjects/address-groups.md)
 
 ## Service Setup
 * [IKE Crypto Profiles](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/examples/serviceSetup/ike-crypto-profiles.md)
+* [Service Connections](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/examples/serviceSetup/service-connections.md)

@@ -1,4 +1,4 @@
-# Examples on how to work with tags
+# Examples on how to work with IKE Crypto Profiles
 In all examples, it will either return a success or failure when attempting the operation.
 
 ## Authentication
@@ -15,13 +15,13 @@ n = prismaAccess.prismaAccess(p.saseToken)
 Now we can proceed with the commands below.
 
 ## List all IKE Crypto Profiles
-To list all tags within shared folder (it defaults to _Shared_ folder)
+To list all IKE Crypto Profiles within shared folder (it defaults to _Shared_ folder)
 ```python
-n.n.paIkeCryptoProfilesListIkeCryptoProfiles()
+n.paIkeCryptoProfilesListIkeCryptoProfiles()
 ```
 
 
-To list all tags within a specific folder, e.g. _Remote Networks_
+To list all IKE Crypto Profiles within a specific folder, e.g. _Remote Networks_
 ```python
 n.paIkeCryptoProfilesListIkeCryptoProfiles("Remote Networks")
 ```

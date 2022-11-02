@@ -17,13 +17,17 @@ Now we can proceed with the commands below.
 ## List all Address Groups
 To list all addresses within shared folder (it defaults to _Shared_ folder)
 ```python
-n.paAddressGroupsListAddressGroups()
+o = policyObjects.policyObjects(n)
+
+o.paAddressGroupsListAddressGroups()
 ```
 
 
 To list all addresses within a specific folder, e.g. _Remote Networks_
 ```python
-n.paAddressGroupsListAddressGroups("Remote Networks")
+o = policyObjects.policyObjects(n)
+
+o.paAddressGroupsListAddressGroups("Remote Networks")
 ```
 
 
@@ -32,17 +36,20 @@ To create an address-group in the _Shared_ folder (it defaults to _Shared_)
 
 Assumes that the `MyTag` tag is created, as well as address objects `testObject2` and `testObject4`.
 ```python
-exampleGroupObject = { "name": "testGroupObject1234", "description": "Test group object description", "tag": ["MyTag"], "static": ["testObject2", "testObject4"]}
-n.paAddressGroupsCreate(exampleGroupObject)
+o = policyObjects.policyObjects(n)
 
+exampleGroupObject = { "name": "testGroupObject1234", "description": "Test group object description", "tag": ["MyTag"], "static": ["testObject2", "testObject4"]}
+o.paAddressGroupsCreate(exampleGroupObject)
 ```
 
 This will create an address in the "Remote Networks" folder.
 
 Assumes that the `MyTag` tag is created, as well as address objects `testObject2` and `testObject4`.
 ```python
+o = policyObjects.policyObjects(n)
+
 exampleGroupObject = { "name": "testGroupObject1234", "description": "Test group object description", "tag": ["MyTag"], "static": ["testObject2", "testObject4"]}
-n.paAddressGroupsCreate(exampleGroupObject, "Remote Networks")
+o.paAddressGroupsCreate(exampleGroupObject, "Remote Networks")
 ```
 
 ## Edit an Address
@@ -54,8 +61,10 @@ This will edit an existing address object named _testGroupObject1234_.
 Assumes that `testObject2` and `testObject4` both exist.
 
 ```python
+o = policyObjects.policyObjects(n)
+
 exampleGroupObject = { "name": "testGroupObject1234", "description": "Test group123 object description", "static": ["testObject2", "testObject4"]}
-n.paAddressGroupsEdit(exampleGroupObject, "Remote Networks")
+o.paAddressGroupsEdit(exampleGroupObject, "Remote Networks")
 ```
 
 ## Delete an Address
@@ -64,6 +73,8 @@ To edit an delete address in the _Remote Networks_ folder.
 It defaults to _Shared_, so if you want it removed there, just remove the _"Remote Networks"_ argument
 
 ```python
+o = policyObjects.policyObjects(n)
+
 exampleGroupObject = { "name": "testGroupObject1234" }
-n.paAddressesDelete(exampleGroupObject, "Remote Networks")
+o.paAddressesDelete(exampleGroupObject, "Remote Networks")
 ```

@@ -6,6 +6,7 @@ First authenticate to the API service:
 ```python
 from auth import saseAuthentication
 from access import prismaAccess
+from access import policyObjects
 
 p = saseAuthentication.saseAuthentication()
 p.prismaAccessAuthLoadToken()
@@ -17,13 +18,17 @@ Now we can proceed with the commands below.
 ## List all Addresses
 To list all addresses within shared folder (it defaults to _Shared_ folder)
 ```python
-n.paAddressesListAddresses()
+o = policyObjects.policyObjects(n)
+
+o.paAddressesListAddresses()
 ```
 
 
 To list all addresses within a specific folder, e.g. _Remote Networks_
 ```python
-n.paAddressesListAddresses("Remote Networks")
+o = policyObjects.policyObjects(n)
+
+o.paAddressesListAddresses("Remote Networks")
 ```
 
 
@@ -32,16 +37,20 @@ To create an address in the _Shared_ folder (it defaults to _Shared_)
 
 Assumes that the `ADEM` tag is created
 ```python
+o = policyObjects.policyObjects(n)
+
 addressObject = { "name": "testObject2", "fqdn": "thisisahostname.com", "tag": [ "ADEM" ] }
-n.paAddressesCreate(addressObject)
+o.paAddressesCreate(addressObject)
 ```
 
 This will create an address in the "Remote Networks" folder.
 
 Assumes that the `ADEM` tag is created
 ```python
+o = policyObjects.policyObjects(n)
+
 addressObject = { "name": "testObject2", "fqdn": "thisisahostname.com", "tag": [ "ADEM" ] }
-n.paAddressesCreate(addressObject, "Remote Networks")
+o.paAddressesCreate(addressObject, "Remote Networks")
 ```
 
 ## Edit an Address
@@ -53,8 +62,10 @@ This will edit an existing address object named _testObject2_.
 Assumes that the `ADEM` tag is created
 
 ```python
+o = policyObjects.policyObjects(n)
+
 addressObject = { "name": "testObject2", "ip_netmask": "1.1.1.1", "tag": [ "ADEM" ] }
-n.paAddressesEdit(addressObject, "Remote Networks")
+o.paAddressesEdit(addressObject, "Remote Networks")
 ```
 
 ## Delete an Address
@@ -63,6 +74,8 @@ To edit an delete address in the _Remote Networks_ folder.
 It defaults to _Shared_, so if you want it removed there, just remove the _"Remote Networks"_ argument
 
 ```python
+o = policyObjects.policyObjects(n)
+
 addressObject = { "name": "testObject2" }
-n.paAddressesDelete(addressObject, "Remote Networks")
+o.paAddressesDelete(addressObject, "Remote Networks")
 ```

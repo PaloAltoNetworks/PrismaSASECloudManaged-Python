@@ -1,4 +1,13 @@
 # Changelog
+## 2022/11/02 - Version 0.07
+### Features Added
+* Added support for Service Connections
+
+## 2022/10/21 - Version 0.06
+### Changes
+* rewrote all the modules to align with better coding practices.
+* updated readme documents to reflect newer way of making changes.
+
 ## 2022/10/20 - Version 0.05
 ### Features Added
 #### Service Setup
