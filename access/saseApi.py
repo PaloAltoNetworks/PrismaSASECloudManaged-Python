@@ -1,4 +1,5 @@
 import requests
+import json
 
 class saseApi:
 	"""saseApi class"""
@@ -13,7 +14,7 @@ class saseApi:
 		__response = __response.json()
 
 		if __displayOutput:
-			print(__response)
+			print(json.dumps(__response))
 		return __response
 
 	def paCreate(self, __jsonObject, __folder="Shared"):
@@ -23,7 +24,7 @@ class saseApi:
 		__params = { "folder": __folder }
 		__response = requests.post(url=self.saseUri, headers=self.saseAuthHeaders, json=__jsonObject, params=__params)
 		__responseStatusCode = __response.status_code
-		__response = __response.json()
+		__response = json.dumps(__response.json())
 
 		match __responseStatusCode:
 			case 404:
@@ -48,11 +49,8 @@ class saseApi:
 		myList = self.paList(__folder,False)
 		myObjectId = ""
 		if 'data' in myList:
-			# Let's go and find the address ID
+			# Let's go and find the object ID
 			for item in myList['data']:
-				print(f"jsonobject = {__jsonObject}")
-				print(f"item = {item}")
-				print(f"folder = {__folder}")
 				if __folder != "Service Connections":
 					if item['name'] == __jsonObject['name'] and item['folder'] == __folder:
 						myObjectId = item['id']
@@ -68,7 +66,7 @@ class saseApi:
 			__params = { "folder": __folder }
 			__response = requests.put(url=__editUri, headers=self.saseAuthHeaders, json=__jsonObject, params=__params)
 			__responseStatusCode = __response.status_code
-			__response = __response.json()
+			__response = json.dumps(__response.json())
 
 			match __responseStatusCode:
 				case 404:
@@ -101,7 +99,7 @@ class saseApi:
 		if 'data' in myList:
 			# Let's go and find the address ID
 			for item in myList['data']:
-				if __folder != "Service Connections":
+				if (__folder != "Service Connections") or (__folder != "Remote Networks"):
 					if item['name'] == __jsonObject['name'] and item['folder'] == __folder:
 						myObjectId = item['id']
 						break
@@ -120,7 +118,7 @@ class saseApi:
 			__params = { "folder": __folder }
 			__response = requests.delete(url=__deleteUri, headers=self.saseAuthHeaders, json=__jsonObject, params=__params)
 			__responseStatusCode = __response.status_code
-			__response = __response.json()
+			__response = json.dumps(__response.json())
 
 			match __responseStatusCode:
 				case 409:

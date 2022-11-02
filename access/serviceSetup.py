@@ -23,7 +23,7 @@ class serviceSetup:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paServiceConnectionsCreateServiceConnection(self, __serviceConnectionObject, __folder="Service Connections"):
-		"""List all service connections that are defined."""
+		"""Create Service Connection."""
 		if self.checkTokenStillValid():
 			paServiceConnection = saseApi.saseApi(self.prismaAccessObject.serviceConnectionsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
 			paServiceConnection.paCreate(__serviceConnectionObject, __folder)
@@ -31,7 +31,7 @@ class serviceSetup:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paServiceConnectionsDeleteServiceConnection(self, __serviceConnectionObject, __folder="Service Connections"):
-		"""List all service connections that are defined."""
+		"""Delete service connection."""
 		if self.checkTokenStillValid():
 			paServiceConnection = saseApi.saseApi(self.prismaAccessObject.serviceConnectionsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
 			paServiceConnection.paDelete(__serviceConnectionObject, __folder)
@@ -39,7 +39,7 @@ class serviceSetup:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paServiceConnectionsEditServiceConnection(self, __serviceConnectionObject, __folder="Service Connections"):
-		"""List all service connections that are defined."""
+		"""Edit Service Connection"""
 		if self.checkTokenStillValid():
 			paServiceConnection = saseApi.saseApi(self.prismaAccessObject.serviceConnectionsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
 			paServiceConnection.paEdit(__serviceConnectionObject, __folder)
@@ -51,6 +51,30 @@ class serviceSetup:
 		if self.checkTokenStillValid():
 			paIpsecTunnels = saseApi.saseApi(self.prismaAccessObject.ipsecTunnelsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
 			paIpsecTunnels.paList(__folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paIpsecTunnelsCreateIpsecTunnel(self, __ipsecTunnelObject, __folder="Service Connections"):
+		"""Create IPSec Tunnels"""
+		if self.checkTokenStillValid():
+			paIpsecTunnels = saseApi.saseApi(self.prismaAccessObject.ipsecTunnelsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paIpsecTunnels.paCreate(__ipsecTunnelObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paIpsecTunnelsEditIpsecTunnel(self, __ipsecTunnelObject, __folder="Service Connections"):
+		"""Edit IPSec Tunnel"""
+		if self.checkTokenStillValid():
+			paIpsecTunnels = saseApi.saseApi(self.prismaAccessObject.ipsecTunnelsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paIpsecTunnels.paEdit(__ipsecTunnelObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paIpsecTunnelsDeleteIpsecTunnel(self, __ipsecTunnelObject, __folder="Service Connections"):
+		"""Edit IPSec Tunnel"""
+		if self.checkTokenStillValid():
+			paIpsecTunnels = saseApi.saseApi(self.prismaAccessObject.ipsecTunnelsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paIpsecTunnels.paDelete(__ipsecTunnelObject, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 

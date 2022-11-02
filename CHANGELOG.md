@@ -1,4 +1,8 @@
 # Changelog
+## 2022/11/02 - Version 0.08
+### Features Added
+* Added support for Ipsec Tunnels
+
 ## 2022/11/02 - Version 0.07
 ### Features Added
 * Added support for Service Connections

@@ -47,7 +47,7 @@ o.paServiceConnectionsEditServiceConnection(ServiceConnection1)
 ```
 
 ## Delete a Service Connection
-To edit an delete a _Service Connection_. 
+To delete a _Service Connection_. 
 
 ```python
 o = serviceSetup.serviceSetup(n)
