@@ -1,4 +1,8 @@
 # Changelog
+## 2022/11/03 - Version 0.09
+### Features Added
+* Added Delete, Edit, Create for IKE Gateways
+
 ## 2022/11/02 - Version 0.08
 ### Features Added
 * Added support for Ipsec Tunnels

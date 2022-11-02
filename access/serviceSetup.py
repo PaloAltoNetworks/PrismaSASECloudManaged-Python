@@ -89,6 +89,39 @@ class serviceSetup:
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
+	def paIkeGatewaysCreateIkeGateway(self, __ikeGatewayObject, __folder="Service Connections"):
+		"""
+		Create IKE Gateway
+		Defaults to Service Connections folder.
+		"""
+		if self.checkTokenStillValid():
+			paIkeGateways = saseApi.saseApi(self.prismaAccessObject.ikeGatewaysUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paIkeGateways.paCreate(__ikeGatewayObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paIkeGatewaysEditIkeGateway(self, __ikeGatewayObject, __folder="Service Connections"):
+		"""
+		Edit IKE Gateway
+		Defaults to Service Connections folder.
+		"""
+		if self.checkTokenStillValid():
+			paIkeGateways = saseApi.saseApi(self.prismaAccessObject.ikeGatewaysUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paIkeGateways.paEdit(__ikeGatewayObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paIkeGatewaysDeleteIkeGateway(self, __ikeGatewayObject, __folder="Service Connections"):
+		"""
+		Delete IKE Gateway
+		Defaults to Service Connections folder.
+		"""
+		if self.checkTokenStillValid():
+			paIkeGateways = saseApi.saseApi(self.prismaAccessObject.ikeGatewaysUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paIkeGateways.paDelete(__ikeGatewayObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
 	def paIkeCryptoProfilesListIkeCryptoProfiles(self, __folder="Service Connections"):
 		"""List all IKE Crypto Profiles that are defined."""
 		if self.checkTokenStillValid():

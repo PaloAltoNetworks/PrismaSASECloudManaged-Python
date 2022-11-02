@@ -53,5 +53,6 @@ Resulting output will look like the following:
 
 ## Service Setup
 * [IKE Crypto Profiles](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/examples/serviceSetup/ike-crypto-profiles.md)
-* [Service Connections](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/examples/serviceSetup/service-connections.md)
+* [IKE Gateways](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/examples/serviceSetup/ike-gateways.md)
 * [IPSec Tunnels](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/examples/serviceSetup/ipsec-tunnels.md)
+* [Service Connections](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/examples/serviceSetup/service-connections.md)

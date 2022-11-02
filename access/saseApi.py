@@ -1,5 +1,4 @@
 import requests
-import json
 
 class saseApi:
 	"""saseApi class"""
@@ -14,7 +13,7 @@ class saseApi:
 		__response = __response.json()
 
 		if __displayOutput:
-			print(json.dumps(__response))
+			print(__response)
 		return __response
 
 	def paCreate(self, __jsonObject, __folder="Shared"):
@@ -24,10 +23,12 @@ class saseApi:
 		__params = { "folder": __folder }
 		__response = requests.post(url=self.saseUri, headers=self.saseAuthHeaders, json=__jsonObject, params=__params)
 		__responseStatusCode = __response.status_code
-		__response = json.dumps(__response.json())
+		__response = __response.json()
 
 		match __responseStatusCode:
 			case 404:
+				print(f"jsonobject = {__jsonObject}")
+				print(f"response = {__response}")
 				print(f"404 - An error occured while creating object {__jsonObject['name']} - {__response['_errors'][0]['details']['message']} in folder {__folder}")
 			case 400:
 				print("400 - Bad request. Malformed payload.")
@@ -66,7 +67,7 @@ class saseApi:
 			__params = { "folder": __folder }
 			__response = requests.put(url=__editUri, headers=self.saseAuthHeaders, json=__jsonObject, params=__params)
 			__responseStatusCode = __response.status_code
-			__response = json.dumps(__response.json())
+			__response = __response.json()
 
 			match __responseStatusCode:
 				case 404:
@@ -118,7 +119,7 @@ class saseApi:
 			__params = { "folder": __folder }
 			__response = requests.delete(url=__deleteUri, headers=self.saseAuthHeaders, json=__jsonObject, params=__params)
 			__responseStatusCode = __response.status_code
-			__response = json.dumps(__response.json())
+			__response = __response.json()
 
 			match __responseStatusCode:
 				case 409:

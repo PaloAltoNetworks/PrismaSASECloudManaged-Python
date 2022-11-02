@@ -51,7 +51,7 @@ ipsecTunnel = { "name": "Docker_Net2", "tunnel_interface": "tunnel", "auto_key":
 o.paIpsecTunnelsEditIpsecTunnel(ipsecTunnel)
 ```
 
-## Delete a Service Connection
+## Delete a IPSec Tunnel
 To delete an _IPSec Tunnel_ in the _Remote Networks_ folder. 
 
 ```python
