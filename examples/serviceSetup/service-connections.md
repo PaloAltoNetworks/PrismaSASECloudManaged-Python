@@ -6,6 +6,7 @@ First authenticate to the API service:
 ```python
 from auth import saseAuthentication
 from access import prismaAccess
+from access import serviceSetup
 
 p = saseAuthentication.saseAuthentication()
 p.prismaAccessAuthLoadToken()
