@@ -182,6 +182,22 @@ class serviceSetup:
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
+	def paInfrastructureSettingsListInfrastructureSettings(self, __folder="Shared"):
+		"""List all Infrastructure Settings that are defined."""
+		if self.checkTokenStillValid():
+			paInfrastructureSettings = saseApi.saseApi(self.prismaAccessObject.infrastructureSettingsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paInfrastructureSettings.paList(__folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paInfrastructureSettingsEditInfrastructureSettings(self, __infrastructureSettingsObject, __folder="Shared"):
+		"""Edit Infrastructure Settings"""
+		if self.checkTokenStillValid():
+			paInfrastructureSettings = saseApi.saseApi(self.prismaAccessObject.infrastructureSettingsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paInfrastructureSettings.paEdit(__infrastructureSettingsObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
 	def __init__(self, __prismaAccessObject):
 		"""serviceSetup class initialization"""
 		self.prismaAccessObject = __prismaAccessObject

@@ -59,7 +59,7 @@ class prismaAccess:
 		self.ikeGatewaysUri = self.saseApi + __configV1 + "ike-gateways"
 		self.ipsecCryptoProfilesUri = self.saseApi + __configV1 + "ipsec-crypto-profiles"
 		self.ipsecTunnelsUri = self.saseApi + __configV1 + "ipsec-tunnels"
-		#self.infrastructureSettingsUri = self.saseApi + __configV1 + "shared-infrastructure-settings"
+		self.infrastructureSettingsUri = self.saseApi + __configV1 + "shared-infrastructure-settings"
 		#self.internalDnsServersUri = self.saseApi + __configV1 + "internal-dns-servers"
 		self.licenseTypesUri = self.saseApi + __configV1 + "license-types"
 		self.locationsUri = self.saseApi + __configV1 + "locations"
@@ -87,7 +87,7 @@ class prismaAccess:
 
 	def __init__(self, __saseToken):
 		"""Initialize Class"""
-		self.prismaAccessPythonAPIVersion = "0.10"
+		self.prismaAccessPythonAPIVersion = "0.11"
 		self.saseApi = "https://api.sase.paloaltonetworks.com"
 		self.saseToken = __saseToken
 		self.contentType = "application/json"

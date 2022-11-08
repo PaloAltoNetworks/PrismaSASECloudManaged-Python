@@ -1,4 +1,8 @@
 # Changelog
+## 2022/11/08 - Version 0.11
+### Features Added
+* Added Infrastructure Settings - List and Edit
+
 ## 2022/11/08 - Version 0.10
 ### Features Added
 * Added capabilities for Delete, Edit, Create, List for Remote Networks

@@ -57,3 +57,4 @@ Resulting output will look like the following:
 * [IPSec Tunnels](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/examples/serviceSetup/ipsec-tunnels.md)
 * [Service Connections](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/examples/serviceSetup/service-connections.md)
 * [Remote Networks](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/examples/serviceSetup/remote-networks.md)
+* [Infrastructure Settings](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/examples/serviceSetup/shared-infrastructure-settings.md)
