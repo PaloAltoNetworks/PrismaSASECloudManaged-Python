@@ -1,6 +1,6 @@
 # Prisma SASE Cloud Managed API
 Python framework to make changes to Prisma Access Cloud Managed
-Current working version - _0.09_
+Current working version - _0.10_
 
 * Authors - [TheScriptGuy](https://github.com/TheScriptGuy)
 
@@ -20,6 +20,7 @@ See [CHANGELOG.md](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Py
 | Feature | List | Create | Edit | Delete |
 | ------- | ---- | ------ | ---- | ------ |
 | Service Connections | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Remote Networks | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | IKE Crypto Profiles | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | IKE Gateways | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 
 | IPSec Tunnels | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |

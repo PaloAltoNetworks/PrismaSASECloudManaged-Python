@@ -152,6 +152,35 @@ class serviceSetup:
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
+	def paRemoteNetworksListRemoteNetworks(self, __folder="Remote Networks"):
+		"""List all IKE Crypto Profiles that are defined."""
+		if self.checkTokenStillValid():
+			paRemoteNetworks = saseApi.saseApi(self.prismaAccessObject.remoteNetworksUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paRemoteNetworks.paList(__folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paRemoteNetworksCreateRemoteNetwork(self, __remoteNetworksObject, __folder="Remote Networks"):
+		"""Create an address group object"""
+		if self.checkTokenStillValid():
+			paRemoteNetworks = saseApi.saseApi(self.prismaAccessObject.remoteNetworksUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paRemoteNetworks.paCreate(__remoteNetworksObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paRemoteNetworksEditRemoteNetwork(self, __remoteNetworksObject, __folder="Remote Networks"):
+		if self.checkTokenStillValid():
+			paRemoteNetworks = saseApi.saseApi(self.prismaAccessObject.remoteNetworksUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paRemoteNetworks.paEdit(__remoteNetworksObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paRemoteNetworksDeleteRemoteNetwork(self, __remoteNetworksObject, __folder="Remote Networks"):
+		if self.checkTokenStillValid():
+			paRemoteNetworks = saseApi.saseApi(self.prismaAccessObject.remoteNetworksUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paRemoteNetworks.paDelete(__remoteNetworksObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
 
 	def __init__(self, __prismaAccessObject):
 		"""serviceSetup class initialization"""

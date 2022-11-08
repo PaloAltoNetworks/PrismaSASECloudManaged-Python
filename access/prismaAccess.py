@@ -65,7 +65,7 @@ class prismaAccess:
 		self.locationsUri = self.saseApi + __configV1 + "locations"
 		#self.qosPolicyRulesUri = self.saseApi + __configV1 + "qos-policy-rules"
 		#self.qosProfilesUri = self.saseApi + __configV1 + "qos-profiles"
-		#self.remoteNetworksUri = self.saseApi + __configV1 + "remote-networks"
+		self.remoteNetworksUri = self.saseApi + __configV1 + "remote-networks"
 		self.serviceConnectionsUri = self.saseApi + __configV1 + "service-connections"
 		#self.trafficSteeringUri = self.saseApi + __configV1 + "traffic-steering"
 
@@ -87,7 +87,7 @@ class prismaAccess:
 
 	def __init__(self, __saseToken):
 		"""Initialize Class"""
-		self.prismaAccessPythonAPIVersion = "0.09"
+		self.prismaAccessPythonAPIVersion = "0.10"
 		self.saseApi = "https://api.sase.paloaltonetworks.com"
 		self.saseToken = __saseToken
 		self.contentType = "application/json"

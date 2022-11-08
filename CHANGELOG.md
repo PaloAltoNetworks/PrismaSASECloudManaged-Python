@@ -1,4 +1,8 @@
 # Changelog
+## 2022/11/08 - Version 0.10
+### Features Added
+* Added capabilities for Delete, Edit, Create, List for Remote Networks
+
 ## 2022/11/03 - Version 0.09
 ### Features Added
 * Added Delete, Edit, Create for IKE Gateways
