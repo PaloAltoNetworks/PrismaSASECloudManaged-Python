@@ -87,7 +87,7 @@ class prismaAccess:
 
 	def __init__(self, __saseToken):
 		"""Initialize Class"""
-		self.prismaAccessPythonAPIVersion = "0.12"
+		self.prismaAccessPythonAPIVersion = "0.13"
 		self.saseApi = "https://api.sase.paloaltonetworks.com"
 		self.saseToken = __saseToken
 		self.contentType = "application/json"

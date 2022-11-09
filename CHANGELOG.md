@@ -1,4 +1,8 @@
 # Changelog
+## 2022/11/09 - Version 0.13
+* Added IPSec Crypto Profiles - Delete, Edit, Create, List
+* Updated examples for IKE Crypto Profiles to reflect new way to make changes
+
 ## 2022/11/08 - Version 0.12
 * Added services objects - Delete, Edit, Create, List
 

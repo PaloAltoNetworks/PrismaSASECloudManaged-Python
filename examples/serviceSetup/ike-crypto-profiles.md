@@ -18,27 +18,34 @@ Now we can proceed with the commands below.
 ## List all IKE Crypto Profiles
 To list all IKE Crypto Profiles within shared folder (it defaults to _Shared_ folder)
 ```python
-n.paIkeCryptoProfilesListIkeCryptoProfiles()
+o = serviceSetup.serviceSetup(n)
+
+o.paIkeCryptoProfilesListIkeCryptoProfiles()
 ```
 
 
 To list all IKE Crypto Profiles within a specific folder, e.g. _Remote Networks_
 ```python
-n.paIkeCryptoProfilesListIkeCryptoProfiles("Remote Networks")
+o = serviceSetup.serviceSetup(n)
+o.paIkeCryptoProfilesListIkeCryptoProfiles("Remote Networks")
 ```
 
 
 ## Create an IKE Crypto Profile
 To create an IKE Crypto Profile in the _Shared_ folder (it defaults to _Shared_)
 ```python
+o = serviceSetup.serviceSetup(n)
+
 ikeCryptoProfileObject = { "name": "MyTestIkeCryptoProfile", "folder": "Remote Networks", "hash": [ "sha1" ], "dh_group": [ "group5" ], "encryption": [ "aes-128-cbc" ], "lifetime": { "hours": 8 } }
-n.paIkeCryptoProfilesCreate(ikeCryptoProfileObject)
+o.paIkeCryptoProfilesCreate(ikeCryptoProfileObject)
 ```
 
 This will create a IKE Crypto Profile in the "Remote Networks" folder.
 ```python
+o = serviceSetup.serviceSetup(n)
+
 ikeCryptoProfileObject = { "name": "MyTestIkeCryptoProfile", "folder": "Remote Networks", "hash": [ "sha1" ], "dh_group": [ "group5" ], "encryption": [ "aes-128-cbc" ], "lifetime": { "hours": 8 } }
-n.paIkeCryptoProfilesCreate(ikeCryptoProfileObject, "Remote Networks")
+o.paIkeCryptoProfilesCreate(ikeCryptoProfileObject, "Remote Networks")
 ```
 
 ## Edit a IKE Crypto Profile
@@ -47,8 +54,10 @@ To edit an existing IKE Crypto Profile in the _Remote Networks_ folder.
 It defaults to _Shared_, so if you want it removed there, just remove the _"Remote Networks"_ argument
 
 ```python
+o = serviceSetup.serviceSetup(n)
+
 ikeCryptoProfileObject = { "name": "MyTestIkeCryptoProfile", "folder": "Remote Networks", "hash": [ "sha256" ], "dh_group": [ "group5" ], "encryption": [ "aes-128-cbc" ], "lifetime": { "hours": 8 } }
-n.paIkeCryptoProfilesEdit(ikeCryptoProfileObject, "Remote Networks")
+o.paIkeCryptoProfilesEdit(ikeCryptoProfileObject, "Remote Networks")
 ```
 
 ## Delete a IKE Crypto Profile
@@ -57,6 +66,8 @@ To edit an delete IKE Crypto Profile in the _Remote Networks_ folder.
 It defaults to _Shared_, so if you want it removed there, just remove the _"Remote Networks"_ argument
 
 ```python
+o = serviceSetup.serviceSetup(n)
+
 ikeCryptoProfileObject = { "name": "MyTestIkeCryptoProfile" }
 n.paIkeCryptoProfilesDelete(ikeCryptoProfileObject, "Remote Networks")
 ```

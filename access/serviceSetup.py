@@ -198,6 +198,36 @@ class serviceSetup:
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
+	def paIpsecCryptoProfilesListIpsecCryptoProfiles(self, __folder="Service Connections"):
+		"""List all IKE Crypto Profiles that are defined."""
+		if self.checkTokenStillValid():
+			paIpsecCryptoProfiles = saseApi.saseApi(self.prismaAccessObject.ipsecCryptoProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paIpsecCryptoProfiles.paList(__folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paIpsecCryptoProfilesCreate(self, __ipsecCryptoProfilesObject, __folder="Shared"):
+		"""Create an address group object"""
+		if self.checkTokenStillValid():
+			paIpsecCryptoProfiles = saseApi.saseApi(self.prismaAccessObject.ipsecCryptoProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paIpsecCryptoProfiles.paCreate(__ipsecCryptoProfilesObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paIpsecCryptoProfilesEdit(self, __ipsecCryptoProfilesObject, __folder="Shared"):
+		if self.checkTokenStillValid():
+			paIpsecCryptoProfiles = saseApi.saseApi(self.prismaAccessObject.ipsecCryptoProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paIpsecCryptoProfiles.paEdit(__ipsecCryptoProfilesObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paIpsecCryptoProfilesDelete(self, __ipsecCryptoProfilesObject, __folder="Shared"):
+		if self.checkTokenStillValid():
+			paIpsecCryptoProfiles = saseApi.saseApi(self.prismaAccessObject.ipsecCryptoProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paIpsecCryptoProfiles.paDelete(__ipsecCryptoProfilesObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
 	def __init__(self, __prismaAccessObject):
 		"""serviceSetup class initialization"""
 		self.prismaAccessObject = __prismaAccessObject
