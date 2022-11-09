@@ -1,4 +1,7 @@
 # Changelog
+## 2022/11/08 - Version 0.12
+* Added services objects - Delete, Edit, Create, List
+
 ## 2022/11/08 - Version 0.11
 ### Features Added
 * Added Infrastructure Settings - List and Edit

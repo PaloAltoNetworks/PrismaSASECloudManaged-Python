@@ -114,6 +114,36 @@ class policyObjects:
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
+	def paServicesListServices(self, __folder="Shared"):
+		"""List all Service Objects that are defined."""
+		if self.checkTokenStillValid():
+			paServices = saseApi.saseApi(self.prismaAccessObject.servicesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paServices.paList(__folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paServicesCreateService(self, __servicesObject, __folder="Shared"):
+		"""Create an address group object"""
+		if self.checkTokenStillValid():
+			paServices = saseApi.saseApi(self.prismaAccessObject.servicesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paServices.paCreate(__servicesObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paServicesEditService(self, __servicesObject, __folder="Shared"):
+		if self.checkTokenStillValid():
+			paServices = saseApi.saseApi(self.prismaAccessObject.servicesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paServices.paEdit(__servicesObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paServicesDeleteService(self, __servicesObject, __folder="Shared"):
+		if self.checkTokenStillValid():
+			paServices = saseApi.saseApi(self.prismaAccessObject.servicesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paServices.paDelete(__servicesObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
 	def __init__(self, __prismaAccessObject):
 		"""Policy Objects class"""
 		self.prismaAccessObject = __prismaAccessObject

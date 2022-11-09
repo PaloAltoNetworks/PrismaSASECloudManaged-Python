@@ -50,6 +50,7 @@ Resulting output will look like the following:
 * [tags](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/examples/policyObjects/tags.md)
 * [address objects](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/examples/policyObjects/addresses.md)
 * [address group objects](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/examples/policyObjects/address-groups.md)
+* [services](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/examples/policyObjects/services.md)
 
 ## Service Setup
 * [IKE Crypto Profiles](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/examples/serviceSetup/ike-crypto-profiles.md)
