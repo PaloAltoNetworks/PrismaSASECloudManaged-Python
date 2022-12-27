@@ -35,7 +35,7 @@ class prismaAccess:
 		# Policy Objects
 		self.addressGroupsUri = self.saseApi + __configV1 + "address-groups"
 		self.addressesUri = self.saseApi + __configV1 + "addresses"
-		#self.applicationFiltersUri = self.saseApi + __configV1 + "application-filters"
+		self.applicationFiltersUri = self.saseApi + __configV1 + "application-filters"
 		#self.applicationGroupsUri = self.saseApi + __configV1 + "application-groups"
 		#self.applicationOverrideRulesUri = self.saseApi + __configV1 + "app-override-rules"
 		#self.applicationsUri = self.saseApi + __configV1 + "applications"
@@ -87,7 +87,7 @@ class prismaAccess:
 
 	def __init__(self, __saseToken):
 		"""Initialize Class"""
-		self.prismaAccessPythonAPIVersion = "0.13"
+		self.prismaAccessPythonAPIVersion = "0.14"
 		self.saseApi = "https://api.sase.paloaltonetworks.com"
 		self.saseToken = __saseToken
 		self.contentType = "application/json"

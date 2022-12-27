@@ -1,4 +1,7 @@
 # Changelog
+## 2022/12/27 - Version 0.14
+* Added Application Filters - Delete, Edit, Create, List
+
 ## 2022/11/09 - Version 0.13
 * Added IPSec Crypto Profiles - Delete, Edit, Create, List
 * Updated examples for IKE Crypto Profiles to reflect new way to make changes

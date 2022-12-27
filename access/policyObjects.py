@@ -144,6 +144,38 @@ class policyObjects:
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
+	def paApplicationFiltersListApplicationFilters(self, __folder="Service Connections"):
+		"""List all Application Filters that are defined."""
+		if self.checkTokenStillValid():
+			paApplicationFilters = saseApi.saseApi(self.prismaAccessObject.applicationFiltersUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paApplicationFilters.paList(__folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paApplicationFiltersCreate(self, __ApplicationFiltersObject, __folder="Shared"):
+		"""Create an Application Filter object"""
+		if self.checkTokenStillValid():
+			paApplicationFilters = saseApi.saseApi(self.prismaAccessObject.applicationFiltersUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paApplicationFilters.paCreate(__ApplicationFiltersObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paApplicationFiltersEdit(self, __ApplicationFiltersObject, __folder="Shared"):
+		"""Edit an Application Filter object"""
+		if self.checkTokenStillValid():
+			paApplicationFilters = saseApi.saseApi(self.prismaAccessObject.applicationFiltersUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paApplicationFilters.paEdit(__ApplicationFiltersObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paApplicationFiltersDelete(self, __ApplicationFiltersObject, __folder="Shared"):
+		"""Delete an Application Filter object"""
+		if self.checkTokenStillValid():
+			paApplicationFilters = saseApi.saseApi(self.prismaAccessObject.applicationFiltersUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paApplicationFilters.paDelete(__ApplicationFiltersObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
 	def __init__(self, __prismaAccessObject):
 		"""Policy Objects class"""
 		self.prismaAccessObject = __prismaAccessObject
