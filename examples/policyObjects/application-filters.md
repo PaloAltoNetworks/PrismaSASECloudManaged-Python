@@ -15,7 +15,7 @@ n = prismaAccess.prismaAccess(p.saseToken)
 Now we can proceed with the commands below.
 
 ## List all Application Filters
-To list all addresses within shared folder (it defaults to _Shared_ folder)
+To list all application filters within shared folder (it defaults to _Shared_ folder)
 ```python
 o = policyObjects.policyObjects(n)
 
@@ -23,7 +23,7 @@ o.paApplicationFiltersListApplicationFilters()
 ```
 
 
-To list all addresses within a specific folder, e.g. _Remote Networks_
+To list all application filters within a specific folder, e.g. _Remote Networks_
 ```python
 o = policyObjects.policyObjects(n)
 
@@ -53,7 +53,7 @@ o.paApplicationFiltersCreate(applicationFilterObject, "Remote Networks")
 ## Edit an Application Filter
 It defaults to _Shared_, so if you want it removed there, just remove the _"Remote Networks"_ argument
 
-To edit an existing address in the _Remote Networks_ folder. 
+To edit an existing application filter in the _Remote Networks_ folder. 
 
 This will edit an existing application filter object named _myTestApplicationFilter2_.
 

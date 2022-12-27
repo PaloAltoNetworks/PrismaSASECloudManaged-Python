@@ -1,4 +1,8 @@
 # Changelog
+## 2022/12/27 - Version 0.15
+* Added Application Groups - Delete, Edit, Create, List
+* Fixed some documentation errors for Application Filters
+
 ## 2022/12/27 - Version 0.14
 * Added Application Filters - Delete, Edit, Create, List
 
