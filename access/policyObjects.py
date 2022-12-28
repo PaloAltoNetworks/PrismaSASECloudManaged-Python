@@ -272,6 +272,38 @@ class policyObjects:
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
+	def paServiceGroupsListServiceGroups(self, __folder="Shared"):
+		"""List all ServiceGroups that are defined."""
+		if self.checkTokenStillValid():
+			paServiceGroups = saseApi.saseApi(self.prismaAccessObject.serviceGroupsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paServiceGroups.paList(__folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paServiceGroupsCreate(self, __ServiceGroupsObject, __folder="Shared"):
+		"""Create an ServiceGroups object"""
+		if self.checkTokenStillValid():
+			paServiceGroups = saseApi.saseApi(self.prismaAccessObject.serviceGroupsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paServiceGroups.paCreate(__ServiceGroupsObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paServiceGroupsEdit(self, __ServiceGroupsObject, __folder="Shared"):
+		"""Edit an ServiceGroups object"""
+		if self.checkTokenStillValid():
+			paServiceGroups = saseApi.saseApi(self.prismaAccessObject.serviceGroupsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paServiceGroups.paEdit(__ServiceGroupsObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paServiceGroupsDelete(self, __ServiceGroupsObject, __folder="Shared"):
+		"""Delete an ServiceGroups object"""
+		if self.checkTokenStillValid():
+			paServiceGroups = saseApi.saseApi(self.prismaAccessObject.serviceGroupsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paServiceGroups.paDelete(__ServiceGroupsObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
 	def __init__(self, __prismaAccessObject):
 		"""Policy Objects class"""
 		self.prismaAccessObject = __prismaAccessObject
