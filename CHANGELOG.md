@@ -1,4 +1,8 @@
 # Changelog
+## 2022/12/27 - Version 0.16
+* Added Applications - Delete Edit, Create, List
+* Fixed error with deleting/editing objects where the number of entries is greater than 200 (default limit size).
+
 ## 2022/12/27 - Version 0.15
 * Added Application Groups - Delete, Edit, Create, List
 * Fixed some documentation errors for Application Filters

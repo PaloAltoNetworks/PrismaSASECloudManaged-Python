@@ -8,11 +8,32 @@ class saseApi:
 		This will list the addresses from the folder.
 		Folder defaults to shared.
 		"""
-		__params = { "folder": __folder }
+		__params = { "folder": __folder, "limit": self.saseLimit }
 		__response = requests.get(url=self.saseUri, headers=self.saseAuthHeaders, params=__params)
 		__response = __response.json()
 
+		if __response["total"] > self.saseLimit:
+			# There are more than self.saseLimit (default: 200) objects retrieved. We need to get through the entire list.
+			numRecords = 0
+
+			while numRecords < __response["total"]:
+				"""
+				Perform all API queries until we've retrieved all objects.
+				"""
+				numRecords = len(__response["data"])
+
+				# Update the offset to reflect the number of records already retrieved.
+				__params2 = { "folder": __folder, "offset": numRecords, "limit": self.saseLimit }
+
+				__response2 = requests.get(url=self.saseUri, headers=self.saseAuthHeaders, params=__params2)
+				__response2 = __response2.json()
+
+				if "data" in __response2:
+					# Append the next batch of application objects to the original data object that we retrieved from __response.
+					__response["data"] = [*__response["data"], *(__response2["data"])]
+
 		if __displayOutput:
+			# We need to display the output to stdout.
 			print(__response)
 		return __response
 
@@ -81,7 +102,7 @@ class saseApi:
 					print(f"Response Status Code - {__responseStatusCode}")
 					print(f"json response = {__response}")
 		else:
-			print(f"Unable to find address ID in {__folder}.")
+			print(f"Unable to find object ID in {__folder}.")
 
 	def paDelete(self, __jsonObject, __folder="Shared"):
 		"""
@@ -135,7 +156,7 @@ class saseApi:
 					print(f"Response Status Code - {__responseStatusCode}")
 					print(f"json response = {__response}")
 		else:
-			print(f"Unable to find address ID in {__folder}.")
+			print(f"Unable to find object ID in {__folder}.")
 
 	def __init__(self, __saseApi, __saseToken, __saseContentType, __saseAuthHeaders):
 		"""saseApi Class Initilization"""
@@ -143,3 +164,4 @@ class saseApi:
 		self.saseToken = __saseToken
 		self.saseContentType = __saseContentType
 		self.saseAuthHeaders = __saseAuthHeaders
+		self.saseLimit = 500

@@ -176,7 +176,7 @@ class policyObjects:
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
-	def paApplicationGroupsListApplicationGroups(self, __folder="Service Connections"):
+	def paApplicationGroupsListApplicationGroups(self, __folder="Shared"):
 		"""List all Application Groups that are defined."""
 		if self.checkTokenStillValid():
 			paApplicationGroups = saseApi.saseApi(self.prismaAccessObject.applicationGroupsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
@@ -205,6 +205,38 @@ class policyObjects:
 		if self.checkTokenStillValid():
 			paApplicationGroups = saseApi.saseApi(self.prismaAccessObject.applicationGroupsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
 			paApplicationGroups.paDelete(__ApplicationGroupsObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paApplicationsListApplications(self, __folder="Shared"):
+		"""List all Applications that are defined."""
+		if self.checkTokenStillValid():
+			paApplications = saseApi.saseApi(self.prismaAccessObject.applicationsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paApplications.paList(__folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paApplicationsCreate(self, __ApplicationsObject, __folder="Shared"):
+		"""Create an Applications object"""
+		if self.checkTokenStillValid():
+			paApplications = saseApi.saseApi(self.prismaAccessObject.applicationsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paApplications.paCreate(__ApplicationsObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paApplicationsEdit(self, __ApplicationsObject, __folder="Shared"):
+		"""Edit an Applications object"""
+		if self.checkTokenStillValid():
+			paApplications = saseApi.saseApi(self.prismaAccessObject.applicationsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paApplications.paEdit(__ApplicationsObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paApplicationsDelete(self, __ApplicationsObject, __folder="Shared"):
+		"""Delete an Applications object"""
+		if self.checkTokenStillValid():
+			paApplications = saseApi.saseApi(self.prismaAccessObject.applicationsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paApplications.paDelete(__ApplicationsObject, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 

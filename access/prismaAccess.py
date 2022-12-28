@@ -38,7 +38,7 @@ class prismaAccess:
 		self.applicationFiltersUri = self.saseApi + __configV1 + "application-filters"
 		self.applicationGroupsUri = self.saseApi + __configV1 + "application-groups"
 		#self.applicationOverrideRulesUri = self.saseApi + __configV1 + "app-override-rules"
-		#self.applicationsUri = self.saseApi + __configV1 + "applications"
+		self.applicationsUri = self.saseApi + __configV1 + "applications"
 		#self.autoTagActionsUri = self.saseApi + __configV1 + "auto-tag-actions"
 		#self.dynamicUserGroupsUri = self.saseApi + __configV1 + "dynamic-user-groups"
 		#self.externalDynamicListsUri = self.saseApi + __configV1 + "external-dynamic-lists"
@@ -87,7 +87,7 @@ class prismaAccess:
 
 	def __init__(self, __saseToken):
 		"""Initialize Class"""
-		self.prismaAccessPythonAPIVersion = "0.15"
+		self.prismaAccessPythonAPIVersion = "0.16"
 		self.saseApi = "https://api.sase.paloaltonetworks.com"
 		self.saseToken = __saseToken
 		self.contentType = "application/json"
