@@ -1,5 +1,8 @@
 # Changelog
 
+## 2022/12/28 - Version 0.20
+* Added HIP Objects - Delete, Edit, Create, List
+
 ## 2022/12/28 - Version 0.19
 * Added Regions - Delete, Edit, Create, List
 * Fixed documentation errors

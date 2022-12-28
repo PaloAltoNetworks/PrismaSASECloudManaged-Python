@@ -336,6 +336,38 @@ class policyObjects:
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
+	def paHipObjectsListHipObjects(self, __folder="Shared"):
+		"""List all HIP Objects that are defined."""
+		if self.checkTokenStillValid():
+			paHipObjects = saseApi.saseApi(self.prismaAccessObject.hipObjectsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paHipObjects.paList(__folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paHipObjectsCreate(self, __HipObjectsObject, __folder="Shared"):
+		"""Create an HIP Objects object"""
+		if self.checkTokenStillValid():
+			paHipObjects = saseApi.saseApi(self.prismaAccessObject.hipObjectsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paHipObjects.paCreate(__HipObjectsObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paHipObjectsEdit(self, __HipObjectsObject, __folder="Shared"):
+		"""Edit an HIP Objects object"""
+		if self.checkTokenStillValid():
+			paHipObjects = saseApi.saseApi(self.prismaAccessObject.hipObjectsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paHipObjects.paEdit(__HipObjectsObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paHipObjectsDelete(self, __HipObjectsObject, __folder="Shared"):
+		"""Delete an HIP Objects object"""
+		if self.checkTokenStillValid():
+			paHipObjects = saseApi.saseApi(self.prismaAccessObject.hipObjectsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paHipObjects.paDelete(__HipObjectsObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
 	def __init__(self, __prismaAccessObject):
 		"""Policy Objects class"""
 		self.prismaAccessObject = __prismaAccessObject
