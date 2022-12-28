@@ -1,6 +1,6 @@
 # Prisma SASE Cloud Managed API
 Python framework to make changes to Prisma Access Cloud Managed
-Current working version - _0.18_
+Current working version - _0.19_
 
 * Authors - [TheScriptGuy](https://github.com/TheScriptGuy)
 
@@ -12,17 +12,16 @@ See [CHANGELOG.md](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Py
 ### policyObjects
 | Feature | List | Create | Edit | Delete |
 | ------- | ---- | ------ | ---- | ------ |
-| Tags | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Address Objects | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Address Group Objects | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Services | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Application Filters | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Application Groups | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Applications | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Regions| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Services | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Service Groups | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Schedules | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-
+| Tags | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 ### Service Setup
 | Feature | List | Create | Edit | Delete |

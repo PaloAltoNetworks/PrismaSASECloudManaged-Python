@@ -1,6 +1,14 @@
 # Changelog
 
-## 2022/12/27 - Version 0.17
+## 2022/12/28 - Version 0.19
+* Added Regions - Delete, Edit, Create, List
+* Fixed documentation errors
+
+## 2022/12/28 - Version 0.18
+* Added Service Groups - Delete, Edit, Create, List
+* Fixed documentation errors
+
+## 2022/12/28 - Version 0.17
 * Added schedules - Delete, Edit, Create, List
 * Fixed documentation for Applications
 

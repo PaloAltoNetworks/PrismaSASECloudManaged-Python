@@ -304,6 +304,38 @@ class policyObjects:
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
+	def paRegionsListRegions(self, __folder="Shared"):
+		"""List all Regions that are defined."""
+		if self.checkTokenStillValid():
+			paRegions = saseApi.saseApi(self.prismaAccessObject.regionsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paRegions.paList(__folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paRegionsCreate(self, __RegionsObject, __folder="Shared"):
+		"""Create a Regions object"""
+		if self.checkTokenStillValid():
+			paRegions = saseApi.saseApi(self.prismaAccessObject.regionsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paRegions.paCreate(__RegionsObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paRegionsEdit(self, __RegionsObject, __folder="Shared"):
+		"""Edit a Regions object"""
+		if self.checkTokenStillValid():
+			paRegions = saseApi.saseApi(self.prismaAccessObject.regionsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paRegions.paEdit(__RegionsObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paRegionsDelete(self, __RegionsObject, __folder="Shared"):
+		"""Delete a Regions object"""
+		if self.checkTokenStillValid():
+			paRegions = saseApi.saseApi(self.prismaAccessObject.regionsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paRegions.paDelete(__RegionsObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
 	def __init__(self, __prismaAccessObject):
 		"""Policy Objects class"""
 		self.prismaAccessObject = __prismaAccessObject
