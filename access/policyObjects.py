@@ -240,6 +240,38 @@ class policyObjects:
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
+	def paSchedulesListSchedules(self, __folder="Shared"):
+		"""List all Schedules that are defined."""
+		if self.checkTokenStillValid():
+			paSchedules = saseApi.saseApi(self.prismaAccessObject.schedulesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paSchedules.paList(__folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paSchedulesCreate(self, __SchedulesObject, __folder="Shared"):
+		"""Create an Schedules object"""
+		if self.checkTokenStillValid():
+			paSchedules = saseApi.saseApi(self.prismaAccessObject.schedulesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paSchedules.paCreate(__SchedulesObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paSchedulesEdit(self, __SchedulesObject, __folder="Shared"):
+		"""Edit an Schedules object"""
+		if self.checkTokenStillValid():
+			paSchedules = saseApi.saseApi(self.prismaAccessObject.schedulesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paSchedules.paEdit(__SchedulesObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paSchedulesDelete(self, __SchedulesObject, __folder="Shared"):
+		"""Delete an Schedules object"""
+		if self.checkTokenStillValid():
+			paSchedules = saseApi.saseApi(self.prismaAccessObject.schedulesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paSchedules.paDelete(__SchedulesObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
 	def __init__(self, __prismaAccessObject):
 		"""Policy Objects class"""
 		self.prismaAccessObject = __prismaAccessObject

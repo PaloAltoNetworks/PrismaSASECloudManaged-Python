@@ -46,7 +46,7 @@ class prismaAccess:
 		#self.hipProfilesUri = self.saseApi + __configV1 + "hip-profiles"
 		#self.quarantinedDevicesUri = self.saseApi + __configV1 + "quarantined-devices"
 		#self.regionsUri = self.saseApi + __configV1 + "regions"
-		#self.schedulesUri = self.saseApi + __configV1 + "schedules"
+		self.schedulesUri = self.saseApi + __configV1 + "schedules"
 		#self.serviceGroupsUri = self.saseApi + __configV1 + "service-groups"
 		self.servicesUri = self.saseApi + __configV1 + "services"
 		self.tagsUri = self.saseApi + __configV1 + "tags"
@@ -87,7 +87,7 @@ class prismaAccess:
 
 	def __init__(self, __saseToken):
 		"""Initialize Class"""
-		self.prismaAccessPythonAPIVersion = "0.16"
+		self.prismaAccessPythonAPIVersion = "0.17"
 		self.saseApi = "https://api.sase.paloaltonetworks.com"
 		self.saseToken = __saseToken
 		self.contentType = "application/json"

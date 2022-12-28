@@ -61,7 +61,7 @@ This will edit an existing application filter object named _myTestApplicationFil
 o = policyObjects.policyObjects(n)
 
 applicationsObject = { "name": "myTestApp12345", "category": "media", "subcategory": "audio-streaming", "technology": "client-server", "default": { "port": [ "tcp/81", "tcp/4441" ] }, "risk": 4}
-o.paApplicationsEdit(applicationsObject, "Shared")
+o.paApplicationsEdit(applicationsObject, "Remote Networks")
 ```
 
 ## Delete an Application Filter
