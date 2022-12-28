@@ -400,6 +400,38 @@ class policyObjects:
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
+	def paExternalDynamicListsListExternalDynamicLists(self, __folder="Shared"):
+		"""List all ExternalDynamicLists that are defined."""
+		if self.checkTokenStillValid():
+			paExternalDynamicLists = saseApi.saseApi(self.prismaAccessObject.externalDynamicListsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paExternalDynamicLists.paList(__folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paExternalDynamicListsCreate(self, __ExternalDynamicListsObject, __folder="Shared"):
+		"""Create an ExternalDynamicLists object"""
+		if self.checkTokenStillValid():
+			paExternalDynamicLists = saseApi.saseApi(self.prismaAccessObject.externalDynamicListsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paExternalDynamicLists.paCreate(__ExternalDynamicListsObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paExternalDynamicListsEdit(self, __ExternalDynamicListsObject, __folder="Shared"):
+		"""Edit an ExternalDynamicLists object"""
+		if self.checkTokenStillValid():
+			paExternalDynamicLists = saseApi.saseApi(self.prismaAccessObject.externalDynamicListsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paExternalDynamicLists.paEdit(__ExternalDynamicListsObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paExternalDynamicListsDelete(self, __ExternalDynamicListsObject, __folder="Shared"):
+		"""Delete an ExternalDynamicLists object"""
+		if self.checkTokenStillValid():
+			paExternalDynamicLists = saseApi.saseApi(self.prismaAccessObject.externalDynamicListsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paExternalDynamicLists.paDelete(__ExternalDynamicListsObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
 	def __init__(self, __prismaAccessObject):
 		"""Policy Objects class"""
 		self.prismaAccessObject = __prismaAccessObject

@@ -1,5 +1,8 @@
 # Changelog
 
+## 2022/12/28 - Version 0.22
+* Added External Dynamic Lists - Delete, Edit, Create, List
+
 ## 2022/12/28 - Version 0.21
 * Added HIP Profiles Objects - Delete, Edit, Create, List
 
