@@ -368,6 +368,38 @@ class policyObjects:
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
+	def paHipProfilesListHipProfiles(self, __folder="Shared"):
+		"""List all HipProfiles that are defined."""
+		if self.checkTokenStillValid():
+			paHipProfiles = saseApi.saseApi(self.prismaAccessObject.hipProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paHipProfiles.paList(__folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paHipProfilesCreate(self, __HipProfilesObject, __folder="Shared"):
+		"""Create an HipProfiles object"""
+		if self.checkTokenStillValid():
+			paHipProfiles = saseApi.saseApi(self.prismaAccessObject.hipProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paHipProfiles.paCreate(__HipProfilesObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paHipProfilesEdit(self, __HipProfilesObject, __folder="Shared"):
+		"""Edit an HipProfiles object"""
+		if self.checkTokenStillValid():
+			paHipProfiles = saseApi.saseApi(self.prismaAccessObject.hipProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paHipProfiles.paEdit(__HipProfilesObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paHipProfilesDelete(self, __HipProfilesObject, __folder="Shared"):
+		"""Delete an HipProfiles object"""
+		if self.checkTokenStillValid():
+			paHipProfiles = saseApi.saseApi(self.prismaAccessObject.hipProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paHipProfiles.paDelete(__HipProfilesObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
 	def __init__(self, __prismaAccessObject):
 		"""Policy Objects class"""
 		self.prismaAccessObject = __prismaAccessObject
