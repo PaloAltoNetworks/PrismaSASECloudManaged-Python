@@ -1,5 +1,8 @@
 # Changelog
 
+## 2023/01/26 - Version 0.24
+* Added Dynamic User Groups - Delete, Edit, Create, List
+
 ## 2023/01/26 - Version 0.23
 * Added URL Categories - Delete, Edit, Create, List
 

@@ -40,7 +40,7 @@ class prismaAccess:
 		#self.applicationOverrideRulesUri = self.saseApi + __configV1 + "app-override-rules"
 		self.applicationsUri = self.saseApi + __configV1 + "applications"
 		#self.autoTagActionsUri = self.saseApi + __configV1 + "auto-tag-actions"
-		#self.dynamicUserGroupsUri = self.saseApi + __configV1 + "dynamic-user-groups"
+		self.dynamicUserGroupsUri = self.saseApi + __configV1 + "dynamic-user-groups"
 		self.externalDynamicListsUri = self.saseApi + __configV1 + "external-dynamic-lists"
 		self.hipObjectsUri = self.saseApi + __configV1 + "hip-objects"
 		self.hipProfilesUri = self.saseApi + __configV1 + "hip-profiles"

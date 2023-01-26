@@ -1,6 +1,6 @@
 # Prisma SASE Cloud Managed API
 Python framework to make changes to Prisma Access Cloud Managed
-Current working version - _0.23_
+Current working version - _0.24_
 
 * Authors - [TheScriptGuy](https://github.com/TheScriptGuy)
 
@@ -17,6 +17,7 @@ See [CHANGELOG.md](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Py
 | Application Filters | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Application Groups | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Applications | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Dynamic User Groups | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | External Dynamic Lists | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | HIP Objects | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | HIP Profiles | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |

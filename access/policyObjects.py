@@ -464,6 +464,38 @@ class policyObjects:
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
+	def paDynamicUserGroupsListDynamicUserGroups(self, __folder="Shared"):
+		"""List all DynamicUserGroups that are defined."""
+		if self.checkTokenStillValid():
+			paDynamicUserGroups = saseApi.saseApi(self.prismaAccessObject.dynamicUserGroupsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paDynamicUserGroups.paList(__folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paDynamicUserGroupsCreate(self, __DynamicUserGroupsObject, __folder="Shared"):
+		"""Create an DynamicUserGroups object"""
+		if self.checkTokenStillValid():
+			paDynamicUserGroups = saseApi.saseApi(self.prismaAccessObject.dynamicUserGroupsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paDynamicUserGroups.paCreate(__DynamicUserGroupsObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paDynamicUserGroupsEdit(self, __DynamicUserGroupsObject, __folder="Shared"):
+		"""Edit an DynamicUserGroups object"""
+		if self.checkTokenStillValid():
+			paDynamicUserGroups = saseApi.saseApi(self.prismaAccessObject.dynamicUserGroupsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paDynamicUserGroups.paEdit(__DynamicUserGroupsObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
+	def paDynamicUserGroupsDelete(self, __DynamicUserGroupsObject, __folder="Shared"):
+		"""Delete an DynamicUserGroups object"""
+		if self.checkTokenStillValid():
+			paDynamicUserGroups = saseApi.saseApi(self.prismaAccessObject.dynamicUserGroupsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paDynamicUserGroups.paDelete(__DynamicUserGroupsObject, __folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
 	def __init__(self, __prismaAccessObject):
 		"""Policy Objects class"""
 		self.prismaAccessObject = __prismaAccessObject
