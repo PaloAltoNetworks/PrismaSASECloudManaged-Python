@@ -62,6 +62,7 @@ Resulting output will look like the following:
 * [service groups](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/examples/policyObjects/service-groups.md)
 * [tags](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/examples/policyObjects/tags.md)
 * [url categories](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/examples/policyObjects/url-categories.md)
+* [url filtering categories](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/examples/policyObjects/url-filtering-categories.md)
 
 
 ## Service Setup

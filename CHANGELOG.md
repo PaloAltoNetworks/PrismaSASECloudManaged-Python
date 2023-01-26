@@ -1,5 +1,8 @@
 # Changelog
 
+## 2023/01/26 - Version 0.25
+* Added URL Filtering Categories - List. Please note that this is currently not working.
+
 ## 2023/01/26 - Version 0.24
 * Added Dynamic User Groups - Delete, Edit, Create, List
 

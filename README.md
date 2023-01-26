@@ -27,6 +27,7 @@ See [CHANGELOG.md](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Py
 | Schedules | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Tags | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | URL Categories | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| URL Filtering Categories | :x: | n/a | n/a | n/a |
 
 
 ### Service Setup

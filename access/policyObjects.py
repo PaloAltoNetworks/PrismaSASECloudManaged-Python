@@ -496,6 +496,14 @@ class policyObjects:
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
+	def paUrlFilteringCategoriesListUrlFilteringCategories(self, __folder="Shared"):
+		"""List all UrlFilteringCategories that are defined."""
+		if self.checkTokenStillValid():
+			paUrlFilteringCategories = saseApi.saseApi(self.prismaAccessObject.urlFilteringCategoriesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paUrlFilteringCategories.paList(__folder)
+		else:
+			print("Please request new token and create new prismaAccess object.")
+
 	def __init__(self, __prismaAccessObject):
 		"""Policy Objects class"""
 		self.prismaAccessObject = __prismaAccessObject
