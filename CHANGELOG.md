@@ -1,5 +1,8 @@
 # Changelog
 
+## 2023/01/26 - Version 0.23
+* Added URL Categories - Delete, Edit, Create, List
+
 ## 2022/12/28 - Version 0.22
 * Added External Dynamic Lists - Delete, Edit, Create, List
 

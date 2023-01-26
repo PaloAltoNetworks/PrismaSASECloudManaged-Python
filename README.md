@@ -1,6 +1,6 @@
 # Prisma SASE Cloud Managed API
 Python framework to make changes to Prisma Access Cloud Managed
-Current working version - _0.22_
+Current working version - _0.23_
 
 * Authors - [TheScriptGuy](https://github.com/TheScriptGuy)
 
@@ -25,6 +25,8 @@ See [CHANGELOG.md](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Py
 | Service Groups | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Schedules | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Tags | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| URL Categories | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+
 
 ### Service Setup
 | Feature | List | Create | Edit | Delete |

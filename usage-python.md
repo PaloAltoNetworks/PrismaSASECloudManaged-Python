@@ -60,6 +60,7 @@ Resulting output will look like the following:
 * [services](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/examples/policyObjects/services.md)
 * [service groups](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/examples/policyObjects/service-groups.md)
 * [tags](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/examples/policyObjects/tags.md)
+* [url categories](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Python/blob/main/examples/policyObjects/url-categories.md)
 
 
 ## Service Setup
