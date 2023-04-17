@@ -43,7 +43,23 @@ See [CHANGELOG.md](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Py
 | Prisma Access Locations | :white_check_mark: | n/a | n/a | n/a |
 | Infrastructure Settings | :white_check_mark: | n/a | :white_check_mark: | n/a |
 
-
+### Security Services
+| Feature | List | Create | Edit | Delete |
+| ------- | ---- | ------ | ---- | ------ |
+| Security Rules | :white_check_mark: | :question: | :question: | :question: |
+| Anti-Spyware Profiles | :white_check_mark: | :question: | :question: | :question: |
+| Anti-Spyware Signatures | :white_check_mark: | :question: | :question: | :question: |
+| Dns Security Profiles | :white_check_mark: | :question: | :question: | :question: | 
+| Decryption Exclusions | :white_check_mark: | :question: | :question: | :question: |
+| Decryption Profiles | :white_check_mark: | :question: | :question: | :question: |
+| Decryption Rules | :white_check_mark: | :question: | :question: | :question: |
+| File-Blocking Profiles | :white_check_mark: | :question: | :question: | :question: |
+| Http-Header Profiles | :white_check_mark: | :question: | :question: | :question: |
+| Profile Groups | :white_check_mark: | :question: | :question: | :question: |
+| Url Access Profiles | :white_check_mark: | :question: | :question: | :question: |
+| Vulnerability Protect Profiles | :white_check_mark: | :question: | :question: | :question: |
+| Vulnerability Protect Signatures | :white_check_mark: | :question: | :question: | :question: |
+| Wildfire AntiVirus Profiles | :white_check_mark: | :question: | :question: | :question: |
 
 # SDWAN
 Not supported (yet)

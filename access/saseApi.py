@@ -3,12 +3,15 @@ import requests
 class saseApi:
 	"""saseApi class"""
 
-	def paList(self, __folder="Shared", __displayOutput=True):
+	def paList(self, __folder="Shared", __position="pre", includePosition=False, __displayOutput=False):
 		"""
 		This will list the addresses from the folder.
 		Folder defaults to shared.
+		Position is included in params if includePosition=True. Position defaults to pre.
 		"""
 		__params = { "folder": __folder, "limit": self.saseLimit }
+		if includePosition:
+			__params["position"] = __position
 		__response = requests.get(url=self.saseUri, headers=self.saseAuthHeaders, params=__params)
 		__response = __response.json()
 
@@ -24,6 +27,8 @@ class saseApi:
 
 				# Update the offset to reflect the number of records already retrieved.
 				__params2 = { "folder": __folder, "offset": numRecords, "limit": self.saseLimit }
+				if includePosition:
+					__params2["position"] = __position
 
 				__response2 = requests.get(url=self.saseUri, headers=self.saseAuthHeaders, params=__params2)
 				__response2 = __response2.json()
@@ -37,11 +42,13 @@ class saseApi:
 			print(__response)
 		return __response
 
-	def paCreate(self, __jsonObject, __folder="Shared"):
+	def paCreate(self, __jsonObject, __folder="Shared", __position="pre", includePosition=False):
 		"""
 		This will create an object (by default in Shared)
 		"""
 		__params = { "folder": __folder }
+		if includePosition:
+			__params["position"] = __position
 		__response = requests.post(url=self.saseUri, headers=self.saseAuthHeaders, json=__jsonObject, params=__params)
 		__responseStatusCode = __response.status_code
 		__response = __response.json()
@@ -60,7 +67,7 @@ class saseApi:
 				print(f"Response Status Code - {__responseStatusCode}")
 				print(f"json response = {__response}")
 
-	def paEdit(self, __jsonObject, __folder="Shared"):
+	def paEdit(self, __jsonObject, __folder="Shared", __position="pre", includePosition=False):
 		"""
 		This will edit an existing object (by default in Shared)
 		If your object references something external from it e.g. an address-group referencing an address object, make sure the address is created first.
@@ -86,6 +93,8 @@ class saseApi:
 			# We should now have the ID.
 			__editUri = self.saseUri + f"/{myObjectId}"
 			__params = { "folder": __folder }
+			if includePosition:
+				__params["position"] = __position
 			__response = requests.put(url=__editUri, headers=self.saseAuthHeaders, json=__jsonObject, params=__params)
 			__responseStatusCode = __response.status_code
 			__response = __response.json()
@@ -104,7 +113,7 @@ class saseApi:
 		else:
 			print(f"Unable to find object ID in {__folder}.")
 
-	def paDelete(self, __jsonObject, __folder="Shared"):
+	def paDelete(self, __jsonObject, __folder="Shared", __position="pre", includePosition=False):
 		"""
 		This will delete an existing object (by default in Shared)
 		The comments field are optional.
@@ -138,6 +147,8 @@ class saseApi:
 			# We should now have the ID.
 			__deleteUri = self.saseUri + f"/{myObjectId}"
 			__params = { "folder": __folder }
+			if includePosition:
+				__params["position"] = __position
 			__response = requests.delete(url=__deleteUri, headers=self.saseAuthHeaders, json=__jsonObject, params=__params)
 			__responseStatusCode = __response.status_code
 			__response = __response.json()
@@ -146,7 +157,7 @@ class saseApi:
 				case 409:
 					print(f"409 - Cannot delete object being referenced {__response['_errors'][0]['details']['message']}")
 				case 404:
-					print(f"404 - An error occured while creating object {__addresssObject['name']} - {__response['_errors'][0]['details']['message']} in folder {__folder}.")
+					print(f"404 - An error occured while creating object {__jsonObject['name']} - {__response['_errors'][0]['details']['message']} in folder {__folder}.")
 				case 400:
 					print("400 - Bad request. Malformed payload.")
 				case 200:
