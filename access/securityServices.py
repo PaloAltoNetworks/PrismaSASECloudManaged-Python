@@ -220,7 +220,7 @@ class securityServices:
 
 	def paFileBlockingProfilesCreate(self, __fileBlockingProfiles, __folder="Shared"):
 		if self.checkTokenStillValid():
-			paFileBlockingProfiles = saseApi.saseApi(self.prismaAccessObject.fileBlockingProfilesUri, self.prismaAccessObjectsaseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
+			paFileBlockingProfiles = saseApi.saseApi(self.prismaAccessObject.fileBlockingProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
 			paFileBlockingProfiles.paCreate(__fileBlockingProfiles, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
