@@ -75,7 +75,7 @@ class saseApi:
 		  1. First is to get the unique ID for the address.
 		  2. Once we have the unique ID, we can change the information about it (except the unique ID)
 		"""
-		myList = self.paList(__folder,False)
+		myList = self.paList(__folder, __position, True, False) if includePosition else self.paList(__folder, False, False)
 		myObjectId = ""
 		if 'data' in myList:
 			# Let's go and find the object ID
@@ -125,7 +125,7 @@ class saseApi:
 		  1. First is to get the unique ID for the address.
 		  2. Once we have the unique ID, we can delete the address
 		"""
-		myList = self.paList(__folder,False)
+		myList = self.paList(__folder, __position, True, False) if includePosition else self.paList(__folder, False, False)
 		myObjectId = ""
 		if 'data' in myList:
 			# Let's go and find the address ID

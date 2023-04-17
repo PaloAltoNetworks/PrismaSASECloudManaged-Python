@@ -46,7 +46,7 @@ See [CHANGELOG.md](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Py
 ### Security Services
 | Feature | List | Create | Edit | Delete |
 | ------- | ---- | ------ | ---- | ------ |
-| Security Rules | :white_check_mark: | :question: | :question: | :question: |
+| Security Rules | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Anti-Spyware Profiles | :white_check_mark: | :question: | :question: | :question: |
 | Anti-Spyware Signatures | :white_check_mark: | :question: | :question: | :question: |
 | Dns Security Profiles | :white_check_mark: | :question: | :question: | :question: | 
