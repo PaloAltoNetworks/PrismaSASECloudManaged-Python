@@ -1,4 +1,4 @@
-# Examples on how to work with addresses
+# Examples on how to work with Security Rules
 In all examples, it will either return a success or failure when attempting the operation.
 
 ## Authentication
