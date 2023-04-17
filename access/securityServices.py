@@ -18,392 +18,392 @@ class securityServices:
 		"""List all security rules that are defined."""
 		if self.checkTokenStillValid():
 			paSecurityRules = saseApi.saseApi(self.prismaAccessObject.securityRulesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paSecurityRules.paList(__folder, __position, includePosition=True)
+			paSecurityRules.paList(__folder, __position, includePosition=True)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paSecurityRulesCreate(self, __securityRuleObject, __folder="Shared", __position="pre"):
 		if self.checkTokenStillValid():
 			paSecurityRules = saseApi.saseApi(self.prismaAccessObject.securityRulesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paSecurityRules.paCreate(__securityRuleObject, __folder, __position, includePosition=True)
+			paSecurityRules.paCreate(__securityRuleObject, __folder, __position, includePosition=True)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paSecurityRulesEdit(self, __securityRuleObject, __folder="Shared", __position="pre"):
 		if self.checkTokenStillValid():
 			paSecurityRules = saseApi.saseApi(self.prismaAccessObject.securityRulesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paSecurityRules.paEdit(__securityRuleObject, __folder, __position, includePosition=True)
+			paSecurityRules.paEdit(__securityRuleObject, __folder, __position, includePosition=True)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paSecurityRulesDelete(self, __securityRuleObject, __folder="Shared", __position="pre"):
 		if self.checkTokenStillValid():
 			paSecurityRules = saseApi.saseApi(self.prismaAccessObject.securityRulesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paSecurityRules.paDelete(__securityRuleObject, __folder, __position, includePosition=True)
+			paSecurityRules.paDelete(__securityRuleObject, __folder, __position, includePosition=True)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paAntiSpywareProfilesList(self, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paAntiSpywareProfiles = saseApi.saseApi(self.prismaAccessObject.antiSpywareProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paAntiSpywareProfiles.paList(__folder)
+			paAntiSpywareProfiles.paList(__folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paAntiSpywareProfilesCreate(self, __antiSpywareProfilesObject, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paAntiSpywareProfiles = saseApi.saseApi(self.prismaAccessObject.antiSpywareProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paAntiSpywareProfiles.paCreate(__antiSpywareProfilesObject, __folder)
+			paAntiSpywareProfiles.paCreate(__antiSpywareProfilesObject, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paAntiSpywareProfilesEdit(self, __antiSpywareProfilesObject, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paAntiSpywareProfiles = saseApi.saseApi(self.prismaAccessObject.antiSpywareProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paAntiSpywareProfiles.paEdit(__antiSpywareProfilesObject, __folder)
+			paAntiSpywareProfiles.paEdit(__antiSpywareProfilesObject, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paAntiSpywareProfilesDelete(self, __antiSpywareProfilesObject, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paAntiSpywareProfiles = saseApi.saseApi(self.prismaAccessObject.antiSpywareProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paAntiSpywareProfiles.paDelete(__antiSpywareProfilesObject, __folder)
+			paAntiSpywareProfiles.paDelete(__antiSpywareProfilesObject, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paAntiSpywareSignaturesList(self, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paAntiSpywareSignatures = saseApi.saseApi(self.prismaAccessObject.antiSpywareSignaturesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paAntiSpywareSignatures.paList(__folder)
+			paAntiSpywareSignatures.paList(__folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paAntiSpywareSignaturesCreate(self, __antiSpywareSignaturesObject, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paAntiSpywareSignatures = saseApi.saseApi(self.prismaAccessObject.antiSpywareSignaturesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paAntiSpywareSignatures.paCreate(__antiSpywareSignaturesObject, __folder)
+			paAntiSpywareSignatures.paCreate(__antiSpywareSignaturesObject, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paAntiSpywareSignaturesEdit(self, __antiSpywareSignaturesObject, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paAntiSpywareSignatures = saseApi.saseApi(self.prismaAccessObject.antiSpywareSignaturesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paAntiSpywareSignatures.paEdit(__antiSpywareSignaturesObject, __folder)
+			paAntiSpywareSignatures.paEdit(__antiSpywareSignaturesObject, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paAntiSpywareSignaturesDelete(self, __antiSpywareSignaturesObject, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paAntiSpywareSignatures = saseApi.saseApi(self.prismaAccessObject.antiSpywareSignaturesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paAntiSpywareSignatures.paDelete(__antiSpywareSignaturesObject, __folder)
+			paAntiSpywareSignatures.paDelete(__antiSpywareSignaturesObject, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paDnsSecurityProfilesList(self, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paDnsSecurityProfiles = saseApi.saseApi(self.prismaAccessObject.dnsSecurityProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paDnsSecurityProfiles.paList(__folder)
+			paDnsSecurityProfiles.paList(__folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paDnsSecurityProfilesCreate(self, __dnsSecurityProfiles, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paDnsSecurityProfiles = saseApi.saseApi(self.prismaAccessObject.dnsSecurityProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paDnsSecurityProfiles.paCreate(__dnsSecurityProfiles, __folder)
+			paDnsSecurityProfiles.paCreate(__dnsSecurityProfiles, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paDnsSecurityProfilesEdit(self, __dnsSecurityProfiles, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paDnsSecurityProfiles = saseApi.saseApi(self.prismaAccessObject.dnsSecurityProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paDnsSecurityProfiles.paEdit(__dnsSecurityProfiles, __folder)
+			paDnsSecurityProfiles.paEdit(__dnsSecurityProfiles, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paDnsSecurityProfilesDelete(self, __dnsSecurityProfiles, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paDnsSecurityProfiles = saseApi.saseApi(self.prismaAccessObject.dnsSecurityProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paDnsSecurityProfiles.paDelete(__dnsSecurityProfiles, __folder)
+			paDnsSecurityProfiles.paDelete(__dnsSecurityProfiles, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paDecryptionExclusionsList(self, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paDecryptionExclusions = saseApi.saseApi(self.prismaAccessObject.decryptionExclusionsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paDecryptionExclusions.paList(__folder)
+			paDecryptionExclusions.paList(__folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paDecryptionExclusionsCreate(self, __decryptionExclusions, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paDecryptionExclusions = saseApi.saseApi(self.prismaAccessObject.decryptionExclusionsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paDecryptionExclusions.paCreate(__decryptionExclusions, __folder)
+			paDecryptionExclusions.paCreate(__decryptionExclusions, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paDecryptionExclusionsEdit(self, __decryptionExclusions, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paDecryptionExclusions = saseApi.saseApi(self.prismaAccessObject.decryptionExclusionsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paDecryptionExclusions.paEdit(__decryptionExclusions, __folder)
+			paDecryptionExclusions.paEdit(__decryptionExclusions, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paDecryptionExclusionsDelete(self, __decryptionExclusions, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paDecryptionExclusions = saseApi.saseApi(self.prismaAccessObject.decryptionExclusionsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paDecryptionExclusions.paDelete(__decryptionExclusions, __folder)
+			paDecryptionExclusions.paDelete(__decryptionExclusions, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paDecryptionProfilesList(self, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paDecryptionProfiles = saseApi.saseApi(self.prismaAccessObject.decryptionProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paDecryptionProfiles.paList(__folder)
+			paDecryptionProfiles.paList(__folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paDecryptionProfilesCreate(self, __decryptionProfiles, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paDecryptionProfiles = saseApi.saseApi(self.prismaAccessObject.decryptionProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paDecryptionProfiles.paCreate(__decryptionProfiles, __folder)
+			paDecryptionProfiles.paCreate(__decryptionProfiles, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paDecryptionProfilesEdit(self, __decryptionProfiles, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paDecryptionProfiles = saseApi.saseApi(self.prismaAccessObject.decryptionProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paDecryptionProfiles.paEdit(__decryptionProfiles, __folder)
+			paDecryptionProfiles.paEdit(__decryptionProfiles, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paDecryptionProfilesDelete(self, __decryptionProfiles, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paDecryptionProfiles = saseApi.saseApi(self.prismaAccessObject.decryptionProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paDecryptionProfiles.paDelete(__decryptionProfiles, __folder)
+			paDecryptionProfiles.paDelete(__decryptionProfiles, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paDecryptionRulesList(self, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paDecryptionRules = saseApi.saseApi(self.prismaAccessObject.decryptionRulesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paDecryptionRules.paList(__folder)
+			paDecryptionRules.paList(__folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paDecryptionRulesCreate(self, __decryptionRules, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paDecryptionRules = saseApi.saseApi(self.prismaAccessObject.decryptionRulesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paDecryptionRules.paCreate(__decryptionRules, __folder)
+			paDecryptionRules.paCreate(__decryptionRules, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paDecryptionRulesEdit(self, __decryptionRules, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paDecryptionRules = saseApi.saseApi(self.prismaAccessObject.decryptionRulesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paDecryptionRules.paEdit(__decryptionRules, __folder)
+			paDecryptionRules.paEdit(__decryptionRules, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paDecryptionRulesDelete(self, __decryptionRules, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paDecryptionRules = saseApi.saseApi(self.prismaAccessObject.decryptionRulesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paDecryptionRules.paDelete(__decryptionRules, __folder)
+			paDecryptionRules.paDelete(__decryptionRules, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paFileBlockingProfilesList(self, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paFileBlockingProfiles = saseApi.saseApi(self.prismaAccessObject.fileBlockingProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paFileBlockingProfiles.paList(__folder)
+			paFileBlockingProfiles.paList(__folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paFileBlockingProfilesCreate(self, __fileBlockingProfiles, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paFileBlockingProfiles = saseApi.saseApi(self.prismaAccessObject.fileBlockingProfilesUri, self.prismaAccessObjectsaseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paFileBlockingProfiles.paCreate(__fileBlockingProfiles, __folder)
+			paFileBlockingProfiles.paCreate(__fileBlockingProfiles, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paFileBlockingProfilesEdit(self, __fileBlockingProfiles, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paFileBlockingProfiles = saseApi.saseApi(self.prismaAccessObject.fileBlockingProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paFileBlockingProfiles.paEdit(__fileBlockingProfiles, __folder)
+			paFileBlockingProfiles.paEdit(__fileBlockingProfiles, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paFileBlockingProfilesDelete(self, __fileBlockingProfiles, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paFileBlockingProfiles = saseApi.saseApi(self.prismaAccessObject.fileBlockingProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paFileBlockingProfiles.paDelete(__fileBlockingProfiles, __folder)
+			paFileBlockingProfiles.paDelete(__fileBlockingProfiles, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paHttpHeaderProfilesList(self, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paHttpHeaderProfiles = saseApi.saseApi(self.prismaAccessObject.httpHeaderProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paHttpHeaderProfiles.paList(__folder)
+			paHttpHeaderProfiles.paList(__folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paHttpHeaderProfilesCreate(self, __httpHeaderProfiles, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paHttpHeaderProfiles = saseApi.saseApi(self.prismaAccessObject.httpHeaderProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paHttpHeaderProfiles.paCreate(__httpHeaderProfiles, __folder)
+			paHttpHeaderProfiles.paCreate(__httpHeaderProfiles, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paHttpHeaderProfilesEdit(self, __httpHeaderProfiles, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paHttpHeaderProfiles = saseApi.saseApi(self.prismaAccessObject.httpHeaderProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paHttpHeaderProfiles.paEdit(__httpHeaderProfiles, __folder)
+			paHttpHeaderProfiles.paEdit(__httpHeaderProfiles, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paHttpHeaderProfilesDelete(self, __httpHeaderProfiles, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paHttpHeaderProfiles = saseApi.saseApi(self.prismaAccessObject.httpHeaderProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paHttpHeaderProfiles.paDelete(__httpHeaderProfiles, __folder)
+			paHttpHeaderProfiles.paDelete(__httpHeaderProfiles, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paProfileGroupsList(self, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paProfileGroups = saseApi.saseApi(self.prismaAccessObject.profileGroupsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paProfileGroups.paList(__folder)
+			paProfileGroups.paList(__folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paProfileGroupsCreate(self, __profileGroups, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paProfileGroups = saseApi.saseApi(self.prismaAccessObject.profileGroupsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paProfileGroups.paCreate(__profileGroups, __folder)
+			paProfileGroups.paCreate(__profileGroups, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paProfileGroupsEdit(self, __profileGroups, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paProfileGroups = saseApi.saseApi(self.prismaAccessObject.profileGroupsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paProfileGroups.paEdit(__profileGroups, __folder)
+			paProfileGroups.paEdit(__profileGroups, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paProfileGroupsDelete(self, __profileGroups, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paProfileGroups = saseApi.saseApi(self.prismaAccessObject.profileGroupsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paProfileGroups.paDelete(__profileGroups, __folder)
+			paProfileGroups.paDelete(__profileGroups, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paUrlAccessProfilesList(self, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paUrlAccessProfiles = saseApi.saseApi(self.prismaAccessObject.urlAccessProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paUrlAccessProfiles.paList(__folder)
+			paUrlAccessProfiles.paList(__folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paUrlAccessProfilesCreate(self, __urlAccessProfiles, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paUrlAccessProfiles = saseApi.saseApi(self.prismaAccessObject.urlAccessProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paUrlAccessProfiles.paCreate(__urlAccessProfiles, __folder)
+			paUrlAccessProfiles.paCreate(__urlAccessProfiles, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paUrlAccessProfilesEdit(self, __urlAccessProfiles, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paUrlAccessProfiles = saseApi.saseApi(self.prismaAccessObject.urlAccessProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paUrlAccessProfiles.paEdit(__urlAccessProfiles, __folder)
+			paUrlAccessProfiles.paEdit(__urlAccessProfiles, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paUrlAccessProfilesDelete(self, __urlAccessProfiles, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paUrlAccessProfiles = saseApi.saseApi(self.prismaAccessObject.urlAccessProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paUrlAccessProfiles.paDelete(__urlAccessProfiles, __folder)
+			paUrlAccessProfiles.paDelete(__urlAccessProfiles, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paVulnerabilityProtectProfilesList(self, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paVulnerabilityProtectProfiles = saseApi.saseApi(self.prismaAccessObject.vulnerabilityProtectProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paVulnerabilityProtectProfiles.paList(__folder)
+			paVulnerabilityProtectProfiles.paList(__folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paVulnerabilityProtectProfilesCreate(self, __vulnerabilityProtectProfiles, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paVulnerabilityProtectProfiles = saseApi.saseApi(self.prismaAccessObject.vulnerabilityProtectProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paVulnerabilityProtectProfiles.paCreate(__vulnerabilityProtectProfiles, __folder)
+			paVulnerabilityProtectProfiles.paCreate(__vulnerabilityProtectProfiles, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paVulnerabilityProtectProfilesEdit(self, __vulnerabilityProtectProfiles, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paVulnerabilityProtectProfiles = saseApi.saseApi(self.prismaAccessObject.vulnerabilityProtectProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paVulnerabilityProtectProfiles.paEdit(__vulnerabilityProtectProfiles, __folder)
+			paVulnerabilityProtectProfiles.paEdit(__vulnerabilityProtectProfiles, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paVulnerabilityProtectProfilesDelete(self, __vulnerabilityProtectProfiles, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paVulnerabilityProtectProfiles = saseApi.saseApi(self.prismaAccessObject.vulnerabilityProtectProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paVulnerabilityProtectProfiles.paDelete(__vulnerabilityProtectProfiles, __folder)
+			paVulnerabilityProtectProfiles.paDelete(__vulnerabilityProtectProfiles, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paVulnerabilityProtectSignaturesList(self, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paVulnerabilityProtectSignatures = saseApi.saseApi(self.prismaAccessObject.vulnerabilityProtectSignaturesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paVulnerabilityProtectSignatures.paList(__folder)
+			paVulnerabilityProtectSignatures.paList(__folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paVulnerabilityProtectSignaturesCreate(self, __vulnerabilityProtectSignatures, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paVulnerabilityProtectSignatures = saseApi.saseApi(self.prismaAccessObject.vulnerabilityProtectSignaturesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paVulnerabilityProtectSignatures.paCreate(__vulnerabilityProtectSignatures, __folder)
+			paVulnerabilityProtectSignatures.paCreate(__vulnerabilityProtectSignatures, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paVulnerabilityProtectSignaturesEdit(self, __vulnerabilityProtectSignatures, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paVulnerabilityProtectSignatures = saseApi.saseApi(self.prismaAccessObject.vulnerabilityProtectSignaturesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paVulnerabilityProtectSignatures.paEdit(__vulnerabilityProtectSignatures, __folder)
+			paVulnerabilityProtectSignatures.paEdit(__vulnerabilityProtectSignatures, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paVulnerabilityProtectSignaturesDelete(self, __vulnerabilityProtectSignatures, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paVulnerabilityProtectSignatures = saseApi.saseApi(self.prismaAccessObject.vulnerabilityProtectSignaturesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paVulnerabilityProtectSignatures.paDelete(__vulnerabilityProtectSignatures, __folder)
+			paVulnerabilityProtectSignatures.paDelete(__vulnerabilityProtectSignatures, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paWildfireAntiVirusProfilesList(self, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paWildfireAntiVirusProfiles = saseApi.saseApi(self.prismaAccessObject.wildfireAntiVirusProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paWildfireAntiVirusProfiles.paList(__folder)
+			paWildfireAntiVirusProfiles.paList(__folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paWildfireAntiVirusProfilesCreate(self, __wildfireAntiVirusProfiles, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paWildfireAntiVirusProfiles = saseApi.saseApi(self.prismaAccessObject.wildfireAntiVirusProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paWildfireAntiVirusProfiles.paCreate(__wildfireAntiVirusProfiles, __folder)
+			paWildfireAntiVirusProfiles.paCreate(__wildfireAntiVirusProfiles, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paWildfireAntiVirusProfilesEdit(self, __wildfireAntiVirusProfiles, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paWildfireAntiVirusProfiles = saseApi.saseApi(self.prismaAccessObject.wildfireAntiVirusProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paWildfireAntiVirusProfiles.paEdit(__wildfireAntiVirusProfiles, __folder)
+			paWildfireAntiVirusProfiles.paEdit(__wildfireAntiVirusProfiles, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paWildfireAntiVirusProfilesDelete(self, __wildfireAntiVirusProfiles, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paWildfireAntiVirusProfiles = saseApi.saseApi(self.prismaAccessObject.wildfireAntiVirusProfilesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			return paWildfireAntiVirusProfiles.paDelete(__wildfireAntiVirusProfiles, __folder)
+			paWildfireAntiVirusProfiles.paDelete(__wildfireAntiVirusProfiles, __folder)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 

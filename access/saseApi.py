@@ -3,7 +3,7 @@ import requests
 class saseApi:
 	"""saseApi class"""
 
-	def paList(self, __folder="Shared", __position="pre", includePosition=False, __displayOutput=False):
+	def paList(self, __folder="Shared", __position="pre", includePosition=False, __displayOutput=True):
 		"""
 		This will list the addresses from the folder.
 		Folder defaults to shared.
