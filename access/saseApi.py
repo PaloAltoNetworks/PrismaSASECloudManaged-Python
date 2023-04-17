@@ -42,7 +42,7 @@ class saseApi:
 			print(__response)
 		return __response
 
-	def paCreate(self, __jsonObject, __folder="Shared", __position="pre", includePosition=False):
+	def paCreate(self, __jsonObject, __folder="Shared", __position="pre", includePosition=False, name_key='name'):
 		"""
 		This will create an object (by default in Shared)
 		"""
@@ -57,17 +57,17 @@ class saseApi:
 			case 404:
 				print(f"jsonobject = {__jsonObject}")
 				print(f"response = {__response}")
-				print(f"404 - An error occured while creating object {__jsonObject['name']} - {__response['_errors'][0]['details']['message']} in folder {__folder}")
+				print(f"404 - An error occured while creating object {__jsonObject[name_key]} - {__response['_errors'][0]['details']['message']} in folder {__folder}")
 			case 400:
 				print("400 - Bad request. Malformed payload.")
 			case 201:
-				print(f"201 - Object {__jsonObject['name']} created in folder {__folder}.")
+				print(f"201 - Object {__jsonObject[name_key]} created in folder {__folder}.")
 			case _:
 				print("Not sure how to interpret response.")
 				print(f"Response Status Code - {__responseStatusCode}")
 				print(f"json response = {__response}")
 
-	def paEdit(self, __jsonObject, __folder="Shared", __position="pre", includePosition=False):
+	def paEdit(self, __jsonObject, __folder="Shared", __position="pre", includePosition=False, name_key='name'):
 		"""
 		This will edit an existing object (by default in Shared)
 		If your object references something external from it e.g. an address-group referencing an address object, make sure the address is created first.
@@ -81,11 +81,11 @@ class saseApi:
 			# Let's go and find the object ID
 			for item in myList['data']:
 				if __folder != "Service Connections":
-					if item['name'] == __jsonObject['name'] and item['folder'] == __folder:
+					if item[name_key] == __jsonObject[name_key] and item['folder'] == __folder:
 						myObjectId = item['id']
 						break
 				else:
-					if item['name'] == __jsonObject['name']:
+					if item[name_key] == __jsonObject[name_key]:
 						myObjectId = item['id']
 						break
 
@@ -101,11 +101,11 @@ class saseApi:
 
 			match __responseStatusCode:
 				case 404:
-					print(f"404 - An error occured while editing object {__jsonObject['name']} - {__response['_errors'][0]['details']['message']} in folder {__folder}.")
+					print(f"404 - An error occured while editing object {__jsonObject[name_key]} - {__response['_errors'][0]['details']['message']} in folder {__folder}.")
 				case 400:
 					print("400 - Bad request. Malformed payload.")
 				case 200:
-					print(f"200 - Object {__jsonObject['name']} edited in folder {__folder}.")
+					print(f"200 - Object {__jsonObject[name_key]} edited in folder {__folder}.")
 				case _:
 					print("Not sure how to interpret response.")
 					print(f"Response Status Code - {__responseStatusCode}")
@@ -113,7 +113,7 @@ class saseApi:
 		else:
 			print(f"Unable to find object ID in {__folder}.")
 
-	def paDelete(self, __jsonObject, __folder="Shared", __position="pre", includePosition=False):
+	def paDelete(self, __jsonObject, __folder="Shared", __position="pre", includePosition=False, name_key='name'):
 		"""
 		This will delete an existing object (by default in Shared)
 		The comments field are optional.
@@ -131,11 +131,11 @@ class saseApi:
 			# Let's go and find the address ID
 			for item in myList['data']:
 				if (__folder != "Service Connections") or (__folder != "Remote Networks"):
-					if item['name'] == __jsonObject['name'] and item['folder'] == __folder:
+					if item[name_key] == __jsonObject[name_key] and item['folder'] == __folder:
 						myObjectId = item['id']
 						break
 				else:
-					if item['name'] == __jsonObject['name']:
+					if item[name_key] == __jsonObject[name_key]:
 						myObjectId = item['id']
 						break
 
@@ -157,11 +157,11 @@ class saseApi:
 				case 409:
 					print(f"409 - Cannot delete object being referenced {__response['_errors'][0]['details']['message']}")
 				case 404:
-					print(f"404 - An error occured while creating object {__jsonObject['name']} - {__response['_errors'][0]['details']['message']} in folder {__folder}.")
+					print(f"404 - An error occured while creating object {__jsonObject[name_key]} - {__response['_errors'][0]['details']['message']} in folder {__folder}.")
 				case 400:
 					print("400 - Bad request. Malformed payload.")
 				case 200:
-					print(f"200 - Object {__jsonObject['name']} deleted in folder {__folder}.")
+					print(f"200 - Object {__jsonObject[name_key]} deleted in folder {__folder}.")
 				case _:
 					print("Not sure how to interpret response.")
 					print(f"Response Status Code - {__responseStatusCode}")

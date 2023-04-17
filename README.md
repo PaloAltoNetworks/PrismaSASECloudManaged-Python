@@ -48,7 +48,7 @@ See [CHANGELOG.md](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Py
 | ------- | ---- | ------ | ---- | ------ |
 | Security Rules | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Anti-Spyware Profiles | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Anti-Spyware Signatures | :white_check_mark: | :x: | :x: | :x: |
+| Anti-Spyware Signatures | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Dns Security Profiles | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 
 | Decryption Exclusions | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Decryption Profiles | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
@@ -58,7 +58,7 @@ See [CHANGELOG.md](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Py
 | Profile Groups | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Url Access Profiles | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Vulnerability Protect Profiles | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Vulnerability Protect Signatures | :white_check_mark: | :x: | :x: | :x: |
+| Vulnerability Protect Signatures | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Wildfire AntiVirus Profiles | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 # SDWAN

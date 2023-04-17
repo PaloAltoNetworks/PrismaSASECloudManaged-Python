@@ -81,21 +81,21 @@ class securityServices:
 	def paAntiSpywareSignaturesCreate(self, __antiSpywareSignaturesObject, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paAntiSpywareSignatures = saseApi.saseApi(self.prismaAccessObject.antiSpywareSignaturesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			paAntiSpywareSignatures.paCreate(__antiSpywareSignaturesObject, __folder)
+			paAntiSpywareSignatures.paCreate(__antiSpywareSignaturesObject, __folder, name_key='threatname')
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paAntiSpywareSignaturesEdit(self, __antiSpywareSignaturesObject, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paAntiSpywareSignatures = saseApi.saseApi(self.prismaAccessObject.antiSpywareSignaturesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			paAntiSpywareSignatures.paEdit(__antiSpywareSignaturesObject, __folder)
+			paAntiSpywareSignatures.paEdit(__antiSpywareSignaturesObject, __folder, name_key='threatname')
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paAntiSpywareSignaturesDelete(self, __antiSpywareSignaturesObject, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paAntiSpywareSignatures = saseApi.saseApi(self.prismaAccessObject.antiSpywareSignaturesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			paAntiSpywareSignatures.paDelete(__antiSpywareSignaturesObject, __folder)
+			paAntiSpywareSignatures.paDelete(__antiSpywareSignaturesObject, __folder, name_key='threatname')
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
@@ -361,21 +361,21 @@ class securityServices:
 	def paVulnerabilityProtectSignaturesCreate(self, __vulnerabilityProtectSignatures, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paVulnerabilityProtectSignatures = saseApi.saseApi(self.prismaAccessObject.vulnerabilityProtectSignaturesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			paVulnerabilityProtectSignatures.paCreate(__vulnerabilityProtectSignatures, __folder)
+			paVulnerabilityProtectSignatures.paCreate(__vulnerabilityProtectSignatures, __folder, name_key='threatname')
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paVulnerabilityProtectSignaturesEdit(self, __vulnerabilityProtectSignatures, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paVulnerabilityProtectSignatures = saseApi.saseApi(self.prismaAccessObject.vulnerabilityProtectSignaturesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			paVulnerabilityProtectSignatures.paEdit(__vulnerabilityProtectSignatures, __folder)
+			paVulnerabilityProtectSignatures.paEdit(__vulnerabilityProtectSignatures, __folder, name_key='threatname')
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paVulnerabilityProtectSignaturesDelete(self, __vulnerabilityProtectSignatures, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paVulnerabilityProtectSignatures = saseApi.saseApi(self.prismaAccessObject.vulnerabilityProtectSignaturesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			paVulnerabilityProtectSignatures.paDelete(__vulnerabilityProtectSignatures, __folder)
+			paVulnerabilityProtectSignatures.paDelete(__vulnerabilityProtectSignatures, __folder, name_key='threatname')
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
