@@ -51,10 +51,10 @@ See [CHANGELOG.md](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Py
 | Anti-Spyware Signatures | :white_check_mark: | :question: | :question: | :question: |
 | Dns Security Profiles | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 
 | Decryption Exclusions | :white_check_mark: | :question: | :question: | :question: |
-| Decryption Profiles | :white_check_mark: | :question: | :question: | :question: |
-| Decryption Rules | :white_check_mark: | :question: | :question: | :question: |
+| Decryption Profiles | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Decryption Rules | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | File-Blocking Profiles | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Http-Header Profiles | :white_check_mark: | :question: | :question: | :question: |
+| Http-Header Profiles | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Profile Groups | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Url Access Profiles | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Vulnerability Protect Profiles | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |

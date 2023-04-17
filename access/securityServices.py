@@ -186,28 +186,28 @@ class securityServices:
 	def paDecryptionRulesList(self, __folder="Shared"):
 		if self.checkTokenStillValid():
 			paDecryptionRules = saseApi.saseApi(self.prismaAccessObject.decryptionRulesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			paDecryptionRules.paList(__folder)
+			paDecryptionRules.paList(__folder, includePosition=True)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
-	def paDecryptionRulesCreate(self, __decryptionRules, __folder="Shared"):
+	def paDecryptionRulesCreate(self, __decryptionRules, __folder="Shared", __position="pre"):
 		if self.checkTokenStillValid():
 			paDecryptionRules = saseApi.saseApi(self.prismaAccessObject.decryptionRulesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			paDecryptionRules.paCreate(__decryptionRules, __folder)
+			paDecryptionRules.paCreate(__decryptionRules, __folder, includePosition=True)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
-	def paDecryptionRulesEdit(self, __decryptionRules, __folder="Shared"):
+	def paDecryptionRulesEdit(self, __decryptionRules, __folder="Shared", __position="pre"):
 		if self.checkTokenStillValid():
 			paDecryptionRules = saseApi.saseApi(self.prismaAccessObject.decryptionRulesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			paDecryptionRules.paEdit(__decryptionRules, __folder)
+			paDecryptionRules.paEdit(__decryptionRules, __folder, includePosition=True)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
-	def paDecryptionRulesDelete(self, __decryptionRules, __folder="Shared"):
+	def paDecryptionRulesDelete(self, __decryptionRules, __folder="Shared", __position="pre"):
 		if self.checkTokenStillValid():
 			paDecryptionRules = saseApi.saseApi(self.prismaAccessObject.decryptionRulesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
-			paDecryptionRules.paDelete(__decryptionRules, __folder)
+			paDecryptionRules.paDelete(__decryptionRules, __folder, includePosition=True)
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
