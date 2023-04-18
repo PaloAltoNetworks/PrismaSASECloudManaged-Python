@@ -1,5 +1,28 @@
 # Changelog
 
+## 2023/04/18 - Version 0.26
+### Features Added
+* Added Security Services
+  * Security Rules - Delete, Edit, Create, List
+  * Anti-Spyware Profiles - Delete, Edit, Create, List
+  * Anti-Spyware Signatures - Delete, Edit, Create, List
+  * Dns Security Profiles - Delete, Edit, Create, List
+  * Decryption Exclusions - Delete, Edit, Create, List
+  * Decryption Profiles - Delete, Edit, Create, List
+  * Decryption Rules - Delete, Edit, Create, List
+  * File-Blocking Profiles - Delete, Edit, Create, List
+  * Http-Header Profiles - Delete, Edit, Create, List
+  * Profile Groups - Delete, Edit, Create, List
+  * Url Access Profiles - Delete, Edit, Create, List
+  * Vulnerability Protect Profiles - Delete, Edit, Create, List
+  * Vulnerability Protect Signatures - Delete, Edit, Create, List
+  * Wildfire AntiVirus Profiles - Delete, Edit, Create, List
+### Changes
+* Add position arg to saseApi paList, paCreate, paEdit, paDelete to support Security Rules and Decryption Rules
+* Update paList - a check for response type to return a list without further processing (For paLocationsListLocations which returns a list)
+* Added name_key arg to paCreate, paEdit, paDelete to support Vuln & AntiSpam Signatures which have a different object name (threatname)
+
+
 ## 2023/01/26 - Version 0.25
 * Added URL Filtering Categories - List. Please note that this is currently not working.
 
