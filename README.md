@@ -1,6 +1,6 @@
 # Prisma SASE Cloud Managed API
 Python framework to make changes to Prisma Access Cloud Managed
-Current working version - _0.24_
+Current working version - _0.26_
 
 * Authors - [TheScriptGuy](https://github.com/TheScriptGuy)
 
@@ -43,7 +43,23 @@ See [CHANGELOG.md](https://github.com/PaloAltoNetworks/PrismaSASECloudManaged-Py
 | Prisma Access Locations | :white_check_mark: | n/a | n/a | n/a |
 | Infrastructure Settings | :white_check_mark: | n/a | :white_check_mark: | n/a |
 
-
+### Security Services
+| Feature | List | Create | Edit | Delete |
+| ------- | ---- | ------ | ---- | ------ |
+| Security Rules | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Anti-Spyware Profiles | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Anti-Spyware Signatures | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Dns Security Profiles | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 
+| Decryption Exclusions | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Decryption Profiles | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Decryption Rules | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| File-Blocking Profiles | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Http-Header Profiles | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Profile Groups | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Url Access Profiles | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Vulnerability Protect Profiles | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Vulnerability Protect Signatures | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Wildfire AntiVirus Profiles | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 # SDWAN
 Not supported (yet)
