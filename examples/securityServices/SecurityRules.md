@@ -42,7 +42,7 @@ securityRule = {"name":"Sample Policy","folder":"Shared","position":"pre","actio
 s.paSecurityRulesCreate(securityRule)
 ```
 
-This will create a security rule in the "Shared" folder.
+This will create a security rule in the "Remote Networks" folder.
 
 ```python
 s = securityServices.securityServices(n)

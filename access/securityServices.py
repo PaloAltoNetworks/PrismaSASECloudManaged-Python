@@ -183,7 +183,7 @@ class securityServices:
 		else:
 			print("Please request new token and create new prismaAccess object.")
 
-	def paDecryptionRulesList(self, __folder="Shared"):
+	def paDecryptionRulesList(self, __folder="Shared", __position="pre"):
 		if self.checkTokenStillValid():
 			paDecryptionRules = saseApi.saseApi(self.prismaAccessObject.decryptionRulesUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
 			paDecryptionRules.paList(__folder, includePosition=True)
