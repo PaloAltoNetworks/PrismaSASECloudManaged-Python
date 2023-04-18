@@ -77,7 +77,7 @@ class policyObjects:
 			print("Please request new token and create new prismaAccess object.")
 
 	def paLocationsListLocations(self):
-		"""List all the Prisma Access Locations"""
+		"""List all the Prisma Access Locations. This data is returned as a List"""
 		if self.checkTokenStillValid():
 			paLocations = saseApi.saseApi(self.prismaAccessObject.locationsUri, self.prismaAccessObject.saseToken, self.prismaAccessObject.contentType, self.prismaAccessObject.saseAuthHeaders)
 			paLocations.paList()

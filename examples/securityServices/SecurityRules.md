@@ -32,8 +32,8 @@ s.paSecurityRulesList("Shared", "pre")
 ```
 
 
-## Create a Security Rules
-To create a security rules in the _Shared_ folder (it defaults to _Shared_). You can also define the position (It defaults to _pre_).
+## Create a Security Rule
+To create a security rule in the _Remote Networks_ folder (it defaults to _Shared_). You can also define the position (It defaults to _pre_).
 
 ```python
 s = securityServices.securityServices(n)
